@@ -1,0 +1,60 @@
+.home__nav{
+    display: flex;
+    flex-flow: row wrap;
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    z-index: 10;
+    color: white;
+}
+
+.hero-header{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap ;
+    align-items: center;
+    color: var(--nx-color-white);
+    height: 400px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.hero-header::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .65);
+}
+
+.hero-header__container{
+    z-index: 1;
+    text-align: center;
+    margin: auto 0 0 0;
+    padding: 0 1rem;
+}
+
+.hero-header__form{
+    z-index: 1;
+    display: flex;
+    flex-flow: column;
+    justify-items: center;
+    margin: 0 0 auto 0;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.hero-header__bg{
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nx-input label{
+    width: 100%;
+}
+.nx-input input{
+    width: 100%;
+}
