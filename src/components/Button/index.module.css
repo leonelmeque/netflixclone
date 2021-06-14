@@ -1,0 +1,16 @@
+
+.nx-btn {
+    /* display: inline-flex; */
+    outline: hidden;
+    padding: 0 1rem;
+    border-radius: 0.15rem;
+    font-weight: 300;
+}
+
+.nx-btn--md{
+    height: 40px;
+}
+
+.nx-btn--red{
+    background-color: var(--nx-color-red);
+}
