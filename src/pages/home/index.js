@@ -5,7 +5,7 @@ const Home = () => (
     <div style={{background: "#222"}}>
         <nav className={styles["home__nav"]}>
             <div className="home__nav-brand" aria-labelledby="Company name">Netflix</div>
-            <div className="home__nav-item" aria-labelled="Sign in">Sign in</div>
+            <Button label="Sign in" variant="red" size="sm"/>
         </nav>
         {/* Hero header */}
         <div className={styles["hero-header"]}>

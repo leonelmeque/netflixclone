@@ -7,6 +7,13 @@
     font-weight: 300;
 }
 
+.nx-btn--sm{
+    height: 32px;
+    font-size: 0.85rem;
+    padding: 0 0.75rem;
+    font-weight: 400;
+}
+
 .nx-btn--md{
     height: 40px;
 }
