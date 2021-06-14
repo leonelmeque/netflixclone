@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import styles from "./styles.module.css"
-import {Button} from '../../components/'
+import {Button, Input} from '../../components/'
 const Home = () => (
     <div style={{background: "#222"}}>
         <nav className={styles["home__nav"]}>
@@ -21,17 +21,7 @@ const Home = () => (
                 </h3>
             </div>
             <form action="submit" className={styles["hero-header__form"]}>
-                <label className={styles["nx-input"]}>
-                    <input 
-                        type="email" 
-                        id="id-nx-input" 
-                        placeholder="Email Address"
-                        autoComplete="email"
-                        />
-                    <label htmlFor="id-nx-input">
-                        Email address
-                    </label>
-                </label>
+                <Input inputName="hero-signup" type="email" placeholder="Email Address" autoComplete/>
                <div className={styles["form-btn__container"]}>
                <Button label="Getting Started" variant="red" size="md" />
                </div>
@@ -96,17 +86,7 @@ const Home = () => (
             <h3>
                 Ready to watch? Enter your email to create or restart your membership
             </h3>
-                <label className={styles["nx-input"]}>
-                    <input 
-                        type="email" 
-                        id="id-nx-input-2" 
-                        placeholder="Email Address"
-                        autoComplete="email"
-                        />
-                    <label htmlFor="id-nx-input-2">
-                        Email address
-                    </label>
-                </label>
+                <Input inputName="signup" type="email" placeholder="Email Address" autoComplete/>
                <div className={styles["form-btn__container"]}>
                <Button label="Getting Started" variant="red" size="md" />
                </div>
