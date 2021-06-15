@@ -22,3 +22,24 @@ a {
   box-sizing: border-box;
 }
 
+.nx-brand{
+  font-size: 1.5rem;
+  color: var(--nx-color-red);
+  text-transform: uppercase;
+}
+
+h1{
+  font-size: var(--nx-h1);
+  font-weight: 500;
+  line-height: 1;
+}
+
+h2{
+  font-size: var(--nx-h2);
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+h3{
+  font-size: var(--nx-h3);
+}

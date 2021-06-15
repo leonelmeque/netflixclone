@@ -1,11 +1,16 @@
 import Link from 'next/link'
 import styles from "./styles.module.css"
-import {Button, Input, Footer} from '../../components/'
+import { Button, ButtonCollapse, Input, Footer } from '../../components/'
+import React from 'react'
+
+
+const DropDownContext = React.createContext()
+DropDownContext.displayName = "ButtonsCollapseProvider"
 const Home = () => (
-    <div style={{background: "#222"}}>
+    <div style={{ background: "#222" }}>
         <nav className={styles["home__nav"]}>
-            <div className="home__nav-brand" aria-labelledby="Company name">Netflix</div>
-            <Button label="Sign in" variant="red" size="sm"/>
+            <div className="nx-brand" aria-labelledby="Company name">Netflix</div>
+            <Button label="Sign in" variant="red" size="sm" />
         </nav>
         {/* Hero header */}
         <div className={styles["hero-header"]}>
@@ -21,10 +26,10 @@ const Home = () => (
                 </h3>
             </div>
             <form action="submit" className={styles["hero-header__form"]}>
-                <Input inputName="hero-signup" type="email" placeholder="Email Address" autoComplete/>
-               <div className={styles["form-btn__container"]}>
-               <Button label="Getting Started" variant="red" size="md" />
-               </div>
+                <Input inputName="hero-signup" type="email" placeholder="Email Address" autoComplete />
+                <div className={styles["form-btn__container"]}>
+                    <Button label="Getting Started" variant="red" size="md" />
+                </div>
             </form>
             <img className={styles["hero-header__bg"]} src="/images/home_background.jpeg" alt="movies backdrop" />
         </div>
@@ -78,22 +83,58 @@ const Home = () => (
         </section>
         <section className={styles["home-faq"]}>
             <div className={styles["home-faq__questions"]}>
-            <h1>Frequently Asked Questions.</h1>
+                <h1>Frequently Asked Questions.</h1>
                 {/* Buttons with icons go here */}
+
+                <ul className={styles["home-faq__questions-container"]}>
+
+                
+                        <ButtonCollapse label="What is Netflix" dropdownText="
+                        Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
+                        You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!
+                        " inputName="1" name="faq" />
+                        <ButtonCollapse label="What is Netflix" inputName="2" name="faq" />
+
+
+
+                        <ButtonCollapse label="What is Netflix" inputName="3" name="faq" />
+
+
+
+                        <ButtonCollapse label="What is Netflix" inputName="4" name="faq" />
+
+
+
+                        <ButtonCollapse label="What is Netflix" inputName="5" name="faq" />
+
+
+
+                        <ButtonCollapse label="What is Netflix" inputName="6" name="faq" />
+
+
+
+                        <ButtonCollapse label="What is Netflix" inputName="7" name="faq" />
+
+
+
+                        <ButtonCollapse label="What is Netflix" inputName="8" name="faq" />
+
+                </ul>
+
             </div>
-            
+
             <form action="submit" className={styles["hero-header__form"]}>
-            <h3>
-                Ready to watch? Enter your email to create or restart your membership
-            </h3>
-                <Input inputName="signup" type="email" placeholder="Email Address" autoComplete/>
-               <div className={styles["form-btn__container"]}>
-               <Button label="Getting Started" variant="red" size="md" />
-               </div>
+                <h3>
+                    Ready to watch? Enter your email to create or restart your membership
+                </h3>
+                <Input inputName="signup" type="email" placeholder="Email Address" autoComplete />
+                <div className={styles["form-btn__container"]}>
+                    <Button label="Getting Started" variant="red" size="md" />
+                </div>
             </form>
         </section>
         {/* Footer component goes here */}
-       <Footer />
+        <Footer />
     </div>
 )
 
