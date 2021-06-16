@@ -30,19 +30,23 @@
 
 .hero-header__container{
     z-index: 1;
+    max-width: 90%;
+    margin: 0 auto;
     text-align: center;
-    margin: auto 0 0 0;
-    padding: 0 1rem;
 }
 
-.hero-header__form{
+.signup-form{
     z-index: 1;
     display: flex;
     flex-flow: row wrap;
     justify-items: center;
     margin: 0 0 auto 0;
     width: 100%;
+}
+
+.signup-form__title{
     padding: 0 1rem;
+    text-align: center;
 }
 
 .form-btn__container{
@@ -65,7 +69,7 @@
     --nx-color-dark: #000;
     display: flex;
     flex-flow: column wrap;
-    padding: 3rem 1.5rem;
+    padding: 3rem 1rem;
     color: var(--nx-color-white);
     background-color: var(--nx-color-dark);
     margin-bottom: 0.5rem;
@@ -90,7 +94,9 @@
     height: 64px;
     border-radius: .7rem;
     border: 2px solid rgb(255, 255, 255, .25);
-    padding: 0.25rem 1rem;
+    padding: 0.25rem 0;
+    max-width: 280px;
+    margin: 0 auto;
 }
 
 .home-feature__mobile img{
@@ -105,7 +111,6 @@
     justify-content:  center;
     padding: 0.15rem 0 0.25rem 0;
 }
-
 
 .home-feature__card-text span:nth-child(1){
     font-size: 0.85rem;
@@ -134,8 +139,14 @@
     margin-bottom: 0.5rem;
 }
 
-.home-faq__questions{
+.home-faq__title{
     padding: 0 1rem;
+    text-align: center;
+}
+
+.home-faq__questions{
+    padding: 0 0rem;
+    margin: 1.5rem 0;;
 }
 
 .home-faq__questions-container{

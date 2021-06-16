@@ -2,10 +2,9 @@ import Link from 'next/link'
 import styles from "./styles.module.css"
 import { Button, ButtonCollapse, Input, Footer } from '../../components/'
 import React from 'react'
+import {homeData} from '../../utilities/constants/static-text'
 
 
-const DropDownContext = React.createContext()
-DropDownContext.displayName = "ButtonsCollapseProvider"
 const Home = () => (
     <div style={{ background: "#222" }}>
         <nav className={styles["home__nav"]}>
@@ -15,22 +14,24 @@ const Home = () => (
         {/* Hero header */}
         <div className={styles["hero-header"]}>
             <div className={styles["hero-header__container"]}>
+            <div className={styles["hero-header__content"]}>
                 <h1>
                     Ultimate movies, Tv shows, and more.
                 </h1>
                 <h2>
                     Watch anywhere. Cancel anytime.
                 </h2>
-                <h3>
+            </div>
+            <form action="submit" className={styles["signup-form"]}>
+                <h3 className={styles['signup-form__title']}>
                     Ready to watch? Enter your email to create or restart your membership.
                 </h3>
-            </div>
-            <form action="submit" className={styles["hero-header__form"]}>
                 <Input inputName="hero-signup" type="email" placeholder="Email Address" autoComplete />
                 <div className={styles["form-btn__container"]}>
-                    <Button label="Getting Started" variant="red" size="md" />
+                    <Button label="Get Started" variant="red" size="md" />
                 </div>
             </form>
+            </div>
             <img className={styles["hero-header__bg"]} src="/images/home_background.jpeg" alt="movies backdrop" />
         </div>
 
@@ -82,49 +83,26 @@ const Home = () => (
             </div>
         </section>
         <section className={styles["home-faq"]}>
+           <div className={styles['home-faq__title']}>
+             <h1>Frequently Asked Questions.</h1>
+           </div>
             <div className={styles["home-faq__questions"]}>
-                <h1>Frequently Asked Questions.</h1>
                 {/* Buttons with icons go here */}
 
                 <ul className={styles["home-faq__questions-container"]}>
-
-                
-                        <ButtonCollapse label="What is Netflix" dropdownText="
-                        Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
-                        You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!
-                        " inputName="1" name="faq" />
-                        <ButtonCollapse label="What is Netflix" inputName="2" name="faq" />
-
-
-
-                        <ButtonCollapse label="What is Netflix" inputName="3" name="faq" />
-
-
-
-                        <ButtonCollapse label="What is Netflix" inputName="4" name="faq" />
-
-
-
-                        <ButtonCollapse label="What is Netflix" inputName="5" name="faq" />
-
-
-
-                        <ButtonCollapse label="What is Netflix" inputName="6" name="faq" />
-
-
-
-                        <ButtonCollapse label="What is Netflix" inputName="7" name="faq" />
-
-
-
-                        <ButtonCollapse label="What is Netflix" inputName="8" name="faq" />
-
+                  {
+                      homeData.faq.map(({id, question, answer})=>(
+                          <li>
+                              <ButtonCollapse label={question} dropdownText={answer}/>
+                          </li>
+                      ))
+                  }    
                 </ul>
 
             </div>
 
-            <form action="submit" className={styles["hero-header__form"]}>
-                <h3>
+            <form action="submit" className={styles["signup-form"]}>
+                <h3 className={styles['signup-form__title']}>
                     Ready to watch? Enter your email to create or restart your membership
                 </h3>
                 <Input inputName="signup" type="email" placeholder="Email Address" autoComplete />
