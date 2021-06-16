@@ -13,8 +13,8 @@ const Home = () => (
         </nav>
         {/* Hero header */}
         <div className={styles["hero-header"]}>
-            <div className={styles["hero-header__container"]}>
-            <div className={styles["hero-header__content"]}>
+            <div className={styles["hero-header-container"]}>
+            <div className={styles["hero-header-content"]}>
                 <h1>
                     Ultimate movies, Tv shows, and more.
                 </h1>
@@ -22,17 +22,21 @@ const Home = () => (
                     Watch anywhere. Cancel anytime.
                 </h2>
             </div>
-            <form action="submit" className={styles["signup-form"]}>
-                <h3 className={styles['signup-form__title']}>
+            <form action="submit" className={styles["nx-form"]}>
+                <div className={styles['nx-form-title']}>
+                <h3>
                     Ready to watch? Enter your email to create or restart your membership.
                 </h3>
-                <Input inputName="hero-signup" type="email" placeholder="Email Address" autoComplete />
-                <div className={styles["form-btn__container"]}>
+                </div>
+                <div className={styles['nx-form-input']}>
+                  <Input inputName="hero-signup" type="email" placeholder="Email Address" autoComplete />
+                </div>
+                <div className={styles["nx-form-btn"]}>
                     <Button label="Get Started" variant="red" size="md" />
                 </div>
             </form>
             </div>
-            <img className={styles["hero-header__bg"]} src="/images/home_background.jpeg" alt="movies backdrop" />
+            <img className={styles["hero-header-bg"]} src="/images/home_background.jpeg" alt="movies backdrop" />
         </div>
 
         {/* Feature 1 */}
@@ -101,15 +105,7 @@ const Home = () => (
 
             </div>
 
-            <form action="submit" className={styles["signup-form"]}>
-                <h3 className={styles['signup-form__title']}>
-                    Ready to watch? Enter your email to create or restart your membership
-                </h3>
-                <Input inputName="signup" type="email" placeholder="Email Address" autoComplete />
-                <div className={styles["form-btn__container"]}>
-                    <Button label="Getting Started" variant="red" size="md" />
-                </div>
-            </form>
+    
         </section>
         {/* Footer component goes here */}
         <Footer />

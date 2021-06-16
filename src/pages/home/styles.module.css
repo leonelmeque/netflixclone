@@ -28,38 +28,59 @@
     background-color: rgba(0, 0, 0, .65);
 }
 
-.hero-header__container{
+.hero-header-container{
     z-index: 1;
-    max-width: 90%;
+    max-width: 400px;
     margin: 0 auto;
     text-align: center;
+    padding: 0 1rem;
+}
+/* Hero header media queries */
+@media only screen and (min-width: 1023px){
+    .hero-header-container{
+        max-width: 580px;   
+    }
 }
 
-.signup-form{
-    z-index: 1;
+.nx-form{
     display: flex;
     flex-flow: row wrap;
-    justify-items: center;
-    margin: 0 0 auto 0;
+}
+
+.nx-form-input{
     width: 100%;
+    margin: 1rem 0;
 }
 
-.signup-form__title{
-    padding: 0 1rem;
-    text-align: center;
+.nx-form-btn{
+    display: inline-block;
+    margin: 0 auto;
+}
+/* sign up form media queries */
+@media only screen and (min-width: 1023px){
+    .nx-form{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .nx-form-input{
+        width: 70%;
+        margin: 1rem 0;
+    }
+    
+    .nx-form-btn{
+        display: inline-block;
+        width: auto;
+        margin: auto 0;
+    }
 }
 
-.form-btn__container{
-    display: flex;
-    width: 100%;
-    margin-top: 1rem;
-    justify-content: center;
-}
 
-.hero-header__bg{
+.hero-header-bg{
     position: absolute;
     z-index: 0;
     height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
