@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import styles from "./styles.module.css"
 import { Button, ButtonCollapse, Input, Footer } from '../../components/'
 import React from 'react'
@@ -41,9 +40,11 @@ const Home = () => (
 
         {/* Feature 1 */}
         <section className={styles["home-feature"]}>
-            <h1>Enjoy on your Tv.</h1>
+           <div className={styles["home-feature-title"]}>
+           <h1>Enjoy on your Tv.</h1>
             <h2>Watch on Smart Tvs, Playstation, Xbox, Chromecast, Apple Tv, Blue-ray players, and more,</h2>
-            <div className={styles["home-feature__tv"]}>
+           </div>
+            <div className={styles["home-feature-tv"]}>
                 <img src="/images/tv.png" alt="tv" />
                 <video className={styles["home-feature__video"]} autoPlay muted loop playsInline>
                     <source src="/video/video-tv-0819.m4v" type="video/mp4" />
@@ -52,11 +53,13 @@ const Home = () => (
         </section>
         {/* Feature 2 */}
         <section className={styles["home-feature"]}>
+        <div className={styles["home-feature-title"]}>
             <h1>Download your shows to watch offline</h1>
             <h2>Save your favorites easly and always have something to watch</h2>
-            <div className={styles["home-feature__image-container"]}>
+            </div>
+            <div className={styles["home-feature-mobile"]}>
                 <img src="/images/mobile.jpeg" alt="mobile" />
-                <div className={styles["home-feature__mobile"]}>
+                <div className={styles["home-feature-mobile-card"]}>
                     <img className="pr-4" src="/images/stcover.png" alt="stanger things movie cover" />
                     <div className={styles["home-feature__card-text"]}>
                         <span>
@@ -82,7 +85,7 @@ const Home = () => (
         <section className={styles["home-feature"]}>
             <h1>Create profiles for kids.</h1>
             <h2>Send kids on adventures with their favorite characters in a space made just for them--free with your membership.</h2>
-            <div className={styles["home__feature-image-container"]}>
+            <div className={styles["home-feature-image-container"]}>
                 <img src="/images/kids.png" alt="kids" />
             </div>
         </section>

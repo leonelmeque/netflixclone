@@ -21,9 +21,9 @@
     --nx-color-dark: #8C8C8C;
     position: absolute;
     left: 10px;
-    top: 30%;
+    top: 0%;
     text-align: left;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: var(--nx-color-dark);
 }
 .nx-input input::placeholder{
@@ -36,7 +36,7 @@
     --nx-color-dark: #8C8C8C;
     position: absolute;
     left: 10px;
-    top: 5%;
-    font-size: 0.75rem;
+    top: -70%;
+    font-size: 0.65rem;
     color: var(--nx-color-dark);
 }
