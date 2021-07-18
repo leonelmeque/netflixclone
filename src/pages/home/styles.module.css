@@ -1,120 +1,41 @@
-.home__nav{
+.nav{
     display: flex;
-    flex-flow: row wrap;
-    position: absolute;
-    width: 100%;
     justify-content: space-between;
-    padding: 1rem 1rem;
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
     z-index: 10;
-    color: white;
 }
 
-.hero-header{
-    position: relative;
-    display: flex;
-    flex-flow: row wrap ;
-    align-items: center;
-    color: var(--nx-color-white);
-    height: 550px;
+.nx-bottom-space{
     margin-bottom: 0.5rem;
-    overflow: hidden;
 }
 
-.hero-header::after{
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, .65);
-}
-
-.hero-header-container{
-    z-index: 1;
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 0 1rem;
-}
-/* Hero header media queries */
-@media only screen and (min-width: 1023px){
-    .hero-header-container{
-        max-width: 580px;   
-    }
-}
-
-.nx-form{
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.nx-form-input{
-    width: 100%;
-    margin: 1rem 0;
-}
-
-.nx-form-btn{
-    display: inline-block;
-    margin: 0 auto;
-}
-/* sign up form media queries */
-@media only screen and (min-width: 1023px){
-    .nx-form{
-        display: flex;
-        flex-flow: row wrap;
-    }
-    
-    .nx-form-input{
-        width: 70%;
-        margin: 1rem 0;
-    }
-    
-    .nx-form-btn{
-        display: inline-block;
-        width: auto;
-        margin: auto 0;
-    }
-}
-
-
-.hero-header-bg{
-    position: absolute;
-    z-index: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-
-/* Features */
-.home-feature{
+/* Feature nx service */
+.nx-service{
     --nx-color-dark: #000;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
+    position: relative;
     padding: 3rem 1rem;
     color: var(--nx-color-white);
     background-color: var(--nx-color-dark);
     margin-bottom: 0.5rem;
     text-align: center;
-}
-@media only screen and (min-width: 1023px){
-    .home-feature{
-        flex-flow: row wrap;
-        padding: 3rem 3.5rem;
-    }
+    min-height: 480px;
 }
 
-.home-feature-tv{
+.nx-service-tv{
     position: relative;
 }
 
-.home-feature-tv img{
+.nx-service-tv img{
    max-width: 530px;
-   /* max-height: 300px; */
    width: 100%;
    margin: auto;
 }
 
-.home-feature-tv video {
+.nx-service-tv video {
     position: absolute;
     top: 48%;
     left: 50%;
@@ -124,22 +45,8 @@
     transform: translate(-50%,-50%);
 }
 
-/* home-feature 1 media queries */
-@media only screen and (min-width: 1023px){
-    .home-feature-title{
-        width: 50%;
-        text-align: left;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-    }
-
-    .home-feature-tv{
-        max-width: 50%;
-    }
-}
-
-.home-feature-mobile-card{
+/* Floating card */
+.nx-service-floating-card{
     display: flex;
     height: 64px;
     border-radius: .7rem;
@@ -147,22 +54,15 @@
     padding: 0.25rem 0;
     max-width: 280px;
     margin: 0 auto;
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: var(--nx-color-dark);
 }
 
-.home-feature-mobile img{
-    padding: .25rem;
-    margin-right: .5rem;
-}
-
-/* home-feature mobile media queries */
-@media only screen and (min-width: 1023px){
-    .home-feature-mobile{
-        order: -1;
-        width: 50%;
-    }
-}
-
-.home-feature__card-text{
+.floating-card-text{
     display: flex;
     flex-flow: column;
     text-align: start;
@@ -170,24 +70,29 @@
     padding: 0.15rem 0 0.25rem 0;
 }
 
-.home-feature__card-text span:nth-child(1){
+.floating-card-img{
+    margin: 0 .75rem 0 .75rem;
+}
+
+.floating-card-text span:nth-child(1){
     font-size: 0.85rem;
 }
 
-.home-feature__card-text span:nth-child(2){
+.floating-card-text span:nth-child(2){
     font-size: 0.75rem;
     color: var(--nx-color-blue);
 }
 
-.home-feature__card-icon-animation{
+.floating-card-icon-animation{
     background: url("/images/icon-animation.gif");
     background-size: contain;
     background-repeat: no-repeat;
     width: 50px;
-    margin: 0 0 0 auto;
+    margin: 0 1rem 0 auto;
 }
 
-.home-faq{
+/* FAQ */
+.nx-faq{
     --nx-color-dark: #000;
     display: flex;
     flex-flow:column ;
@@ -197,19 +102,18 @@
     margin-bottom: 0.5rem;
 }
 
-.home-faq__title{
-    padding: 0 1rem;
+.nx-faq-title{
+    padding: .5rem 0;
     text-align: center;
 }
 
-.home-faq__questions{
+.nx-faq-questions{
     padding: 0 0rem;
     margin: 1.5rem 0;;
 }
 
-.home-faq__questions-container{
+.faq-questions-container{
     display: flex;
     flex-flow: column;
     gap:0.5rem;
 }
-

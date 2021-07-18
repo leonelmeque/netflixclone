@@ -1,0 +1,65 @@
+/* header */
+.hero-header{
+    padding: 1rem;
+    min-height: 480px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-header-container{
+    display: flex;
+    flex-flow: wrap column;
+    z-index: 5;
+    color: white;
+}
+
+.hero-header-container::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0,.4);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-header-intro{
+    z-index: 10;
+}
+
+.hero-header-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+/* Subscription form */
+.subscribe-form{
+    z-index: 10;
+    padding: 0 1rem;
+}
+
+.nx-form{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.nx-form-title{
+    padding: 0 1.5rem;
+}
+
+.nx-form-input{
+    margin: 1rem 0;
+}
+
