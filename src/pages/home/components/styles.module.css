@@ -14,6 +14,7 @@
     flex-flow: wrap column;
     z-index: 5;
     color: white;
+    max-width: 668px;
 }
 
 .hero-header-container::before{
@@ -64,9 +65,27 @@
     margin: 1rem 0;
 }
 
-
 @media only screen and (min-width:768px){
     .hero-header{
         min-height: 733px;
+    }
+}
+
+
+@media only screen and (min-width:1024px){
+    .nx-form{
+        flex-flow: row wrap;
+    }
+    .nx-form-title{
+        width: 100%;
+    }
+
+    .nx-form-input{
+        width: 80%;
+        margin: 0;
+    }
+
+    .nx-form-btn{
+        width: 20%;
     }
 }
