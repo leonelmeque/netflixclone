@@ -25,6 +25,10 @@
     min-height: 480px;
 }
 
+.nx-service-title{
+    
+}
+
 .nx-service-tv{
     position: relative;
 }
@@ -94,7 +98,6 @@
     background-position: center;
     width: 50px;
     margin: 0 1rem 0 auto;
-   
 }
 
 /* FAQ */
@@ -135,4 +138,34 @@
     .floating-card-img{
         margin: 0 1rem 0 .75rem !important;
     }
+}
+
+
+@media only screen and (min-width: 1024px){
+  .nx-service{
+     flex-flow: row wrap;
+     align-items: center;
+     align-content: center;
+     text-align: left;
+  }
+
+  .nx-service-title{
+      width: 50%;
+  }
+
+  .nx-service-floating-card{
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: var(--nx-color-dark);
+}
+
+  .nx-service-mobile,
+  .nx-service-tv,
+  .nx-service-mac,
+  .nx-service-kids{
+    width: 48%;
+    margin: 0;    
+  }
 }
