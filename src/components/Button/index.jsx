@@ -1,15 +1,16 @@
 import styles from "./index.module.css"
 import React from 'react'
 import PropTypes from 'prop-types'
-function Button({label, variant, size, ...args},ref){
+
+const Button = React.forwardRef( ({label,variant,size, ...args},ref)=> {
     return (
         <button ref={ref} className={[styles.nxBtn,styles[variant],styles[size]].join(" ")} {...args}>
                     <span>{label}</span>
         </button>
     )
-}
+})
 
-Button.PropTypes ={
+Button.propTypes ={
     label:PropTypes.string.isRequired,
     variant:PropTypes.oneOf(["primary","secondary","tertiary"]).isRequired,
     size: PropTypes.oneOf(["sm","md","lg"]).isRequired
@@ -20,4 +21,4 @@ Button.defaultProps = {
     size:"md"
 }
 
-export default React.forwardRef(Button)
+export default Button

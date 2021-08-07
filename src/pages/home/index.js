@@ -1,5 +1,7 @@
 import styles from "./styles.module.css"
-import { Button, Accordion, Input, Footer } from '../../components/'
+import Button from '@/components/Button'
+import Accordion from "@/components/Accordion"
+import Footer from "@/components/Footer"
 import React from 'react'
 import {homeData} from '../../utilities/constants/static-text'
 import Header from './components/Header/Header'
