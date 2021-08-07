@@ -1,0 +1,38 @@
+/* Subscription form */
+.container{
+    z-index: 10;
+    padding: 0 1rem;
+}
+
+.form{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.formTitle{
+    padding: 0 1.5rem;
+}
+
+.formInput{
+    margin: 1rem 0;
+}
+
+@media only screen and (min-width:1024px){
+    .form{
+        flex-flow: row wrap;
+    }
+    .formTitle{
+        width: 100%;
+    }
+
+    .formInput{
+        width: 80%;
+        margin: 0;
+    }
+
+    .formBtn{
+        width: 20%;
+    }
+}

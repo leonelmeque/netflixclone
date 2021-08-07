@@ -1,11 +1,11 @@
 
-.nx-footer{
+.footer{
     padding: 3rem 2rem;
     background-color: #000;
     color: var(--nx-color-dark);
 }
 
-.nx-footer__list{
+.list{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -14,7 +14,7 @@
     margin-top: 1.5rem;
 }
 
-.nx-footer__list-item {
+.listItem{
     width: 45%;
     padding: 0 0 .75rem 0
     /* background: rgb(83, 83, 83); */

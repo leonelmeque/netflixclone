@@ -1,7 +1,7 @@
 import styles from "./index.module.css"
 export default function Input({inputName,placeholder, ...args }){
     return(
-        <label className={styles["nx-input"]}>
+        <label className={styles.input}>
             <input 
                 id={`id-nx-input-${inputName}`}
                 placeholder={placeholder}

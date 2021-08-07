@@ -1,23 +1,23 @@
 
-.nx-btn {
-    /* display: inline-flex; */
+.nxBtn {
     outline: hidden;
     padding: 0 1rem;
     border-radius: 0.15rem;
     font-weight: 300;
 }
 
-.nx-btn--sm{
+.sm{
     height: 32px;
     font-size: 0.85rem;
     padding: 0 0.75rem;
     font-weight: 400;
 }
 
-.nx-btn--md{
+.md{
     height: 40px;
 }
 
-.nx-btn--red{
+.primary{
     background-color: var(--nx-color-red);
+    color: white;
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from "./styles.module.css"
 
-import SubForm from './SubForm'
+import SubForm from '../SubscriptonForm/SubForm'
 
 const Header = () => {
     return (
-    <div className={styles["hero-header"]}>
-          <div className={styles["hero-header-container"]}>
-          <div className={styles["hero-header-intro"]}>
+    <header className={styles.header}>
+          <div className={styles.container}>
+          <div className={styles.intro}>
               <h1>
                   Ultimate movies, Tv shows, and more.
               </h1>
@@ -17,8 +17,8 @@ const Header = () => {
           </div>
             <SubForm />
           </div>
-          <img className={styles["hero-header-bg"]} src="/images/home_background.jpeg" alt="movies backdrop" />
-      </div>
+          <img className={styles.bg} src="/images/home_background.jpeg" alt="movies backdrop" />
+      </header>
      );
 }
  

@@ -12,7 +12,7 @@
 }
 
 /* Feature nx service */
-.nx-service{
+.service{
     --nx-color-dark: #000;
     display: flex;
     flex-flow: column;
@@ -25,21 +25,21 @@
     min-height: 480px;
 }
 
-.nx-service-title{
+.serviceTitle{
     
 }
 
-.nx-service-tv{
+.serviceTv{
     position: relative;
 }
 
-.nx-service-tv img{
+.serviceTv img{
    max-width: 530px;
    width: 100%;
    margin: auto;
 }
 
-.nx-service-tv video {
+.serviceTv video {
     position: absolute;
     top: 48%;
     left: 50%;
@@ -49,12 +49,12 @@
     transform: translate(-50%,-50%);
 }
 
-.nx-service-mobile,.nx-service-mac,.nx-service-kids img{
+.serviceMobile,.serviceMac,.serviceKids img{
     margin: 0 auto;
 }
 
 /* Floating card */
-.nx-service-floating-card{
+.floatingCard{
     display: flex;
     height: 64px;
     border-radius: .7rem;
@@ -70,7 +70,7 @@
     background: var(--nx-color-dark);
 }
 
-.floating-card-text{
+.floatingCardText{
     display: flex;
     flex-flow: column;
     text-align: start;
@@ -78,20 +78,20 @@
     padding: 0.15rem 0 0.25rem 0;
 }
 
-.floating-card-img{
+.floatingCardImg{
     margin: 0 .75rem 0 .75rem;
 }
 
-.floating-card-text span:nth-child(1){
+.floatingCardText span:nth-child(1){
     font-size: 0.85rem;
 }
 
-.floating-card-text span:nth-child(2){
+.floatingCardText span:nth-child(2){
     font-size: 0.75rem;
     color: var(--nx-color-blue);
 }
 
-.floating-card-icon-animation{
+.floatingCardIconAnimation{
     background: url("/images/icon-animation.gif");
     background-size: contain;
     background-repeat: no-repeat;
@@ -101,7 +101,7 @@
 }
 
 /* FAQ */
-.nx-faq{
+.faq{
     --nx-color-dark: #000;
     display: flex;
     flex-flow:column ;
@@ -111,49 +111,49 @@
     margin-bottom: 0.5rem;
 }
 
-.nx-faq-title{
+.faqTitle{
     padding: .5rem 0;
     text-align: center;
 }
 
-.nx-faq-questions{
+.faqQuestions{
     padding: 0 0rem;
     margin: 1.5rem 0;;
 }
 
-.faq-questions-container{
+.faqQuestionsContainer{
     display: flex;
     flex-flow: column;
     gap:0.5rem;
 }
 
 @media only screen and (min-width: 768px){
-    .nx-service-floating-card{
+    .FloatingCard{
         max-width: 380px;
         height: 80px;
         bottom: 5rem; 
         padding: 0.25rem 0;
     }
 
-    .floating-card-img{
+    .floatingCardImg{
         margin: 0 1rem 0 .75rem !important;
     }
 }
 
 
 @media only screen and (min-width: 1024px){
-  .nx-service{
+  .service{
      flex-flow: row wrap;
      align-items: center;
      align-content: center;
      text-align: left;
   }
 
-  .nx-service-title{
+  .serviceTitle{
       width: 50%;
   }
 
-  .nx-service-floating-card{
+  .FloatingCard{
     bottom: 2rem;
     left: 0;
     right: 0;
@@ -161,10 +161,10 @@
     background: var(--nx-color-dark);
 }
 
-  .nx-service-mobile,
-  .nx-service-tv,
-  .nx-service-mac,
-  .nx-service-kids{
+  .serviceMobile,
+  .serviceTv,
+  .serviceMac,
+  .serviceKids{
     width: 48%;
     margin: 0;    
   }
