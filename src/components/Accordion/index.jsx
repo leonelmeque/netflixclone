@@ -2,7 +2,7 @@ import React from 'react'
 import {Plus, Minus} from "react-feather"
 import styles from "./index.module.css"
 import PropTypes from 'prop-types'
-function Accordion({label,dropdownText}){
+const Accordion= React.forwardRef(({label,dropdownText},ref)=>{
 
     const toggleSummary = () => {
         const details = document.querySelectorAll("details")
@@ -21,7 +21,7 @@ function Accordion({label,dropdownText}){
      
      return(
         <>
-        <details className={styles.details} onClick={toggleSummary}>
+        <details data-testid="accordion" className={styles.details} onClick={toggleSummary}>
             <summary  className={styles.collapse}>
                 {label} 
             <span className={styles.plus}>
@@ -37,7 +37,7 @@ function Accordion({label,dropdownText}){
         </details>
         </>
      )
-}
+})
 
 Accordion.defaultProps={
     label:"Title",
@@ -49,4 +49,4 @@ Accordion.propTypes = {
     dropdownText: PropTypes.string.isRequired
 }
 
-export default React.forwardRef(Accordion);
+export default Accordion;

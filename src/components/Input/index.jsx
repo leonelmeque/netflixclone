@@ -1,9 +1,12 @@
 import styles from "./index.module.css"
 import PropTypes from 'prop-types'
-export default function Input({inputName,placeholder, ...args }){
+
+ const Input = React.forwardRef(({inputName,placeholder, ...args },ref)=>{
     return(
         <label className={styles.input}>
-            <input 
+            <input
+                ref={ref}
+                data-testid="input" 
                 id={`id-nx-input-${inputName}`}
                 placeholder={placeholder}
                 {...args}
@@ -13,9 +16,11 @@ export default function Input({inputName,placeholder, ...args }){
             </label>
     </label>
     )
-}
+})
 
 Input.propTypes = {
     inputName: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired
 }
+
+export default Input
