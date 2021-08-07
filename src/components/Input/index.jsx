@@ -1,4 +1,5 @@
 import styles from "./index.module.css"
+import PropTypes from 'prop-types'
 export default function Input({inputName,placeholder, ...args }){
     return(
         <label className={styles.input}>
@@ -12,4 +13,9 @@ export default function Input({inputName,placeholder, ...args }){
             </label>
     </label>
     )
+}
+
+Input.propTypes = {
+    inputName: PropTypes.string.isRequired,
+    placeholder: PropTypes.string.isRequired
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 import {Plus, Minus} from "react-feather"
 import styles from "./index.module.css"
-
-const Accordion = ({label,dropdownText}) => {
+import PropTypes from 'prop-types'
+function Accordion({label,dropdownText}){
 
     const toggleSummary = () => {
         const details = document.querySelectorAll("details")
@@ -39,4 +39,14 @@ const Accordion = ({label,dropdownText}) => {
      )
 }
 
-export default Accordion;
+Accordion.defaultProps={
+    label:"Title",
+    dropdownText:"A quick summary of the title"
+}
+
+Accordion.propTypes = {
+    label: PropTypes.string.isRequired,
+    dropdownText: PropTypes.string.isRequired
+}
+
+export default React.forwardRef(Accordion);
