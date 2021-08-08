@@ -33,6 +33,9 @@
     .form{
         gap: 0;
     }
+    .jumboInput {
+        height: 60px !important;
+    }
     .jumboButton, 
     .jumboInput input{
         height: 60px !important;

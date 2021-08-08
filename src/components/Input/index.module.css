@@ -3,11 +3,14 @@
 .input{
     position: relative;
     width: 100%;
+    height: 48px;
     overflow: hidden;
+    display: block;
 }
 .input label{
     width: 100%;
 }
+
 .input input{
     width: 100%;
     height: 48px;
@@ -20,23 +23,25 @@
 .input input + label{
     --nx-color-dark: #8C8C8C;
     position: absolute;
-    left: 10px;
-    top: 0%;
+    left: 7rem;
+    top: 50%;
+    transform: translate(-50%,-50%);
     text-align: left;
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: var(--nx-color-dark);
+    max-width: 200px;
 }
 .input input::placeholder{
     visibility: hidden;
-    /* display: hidden; */
     opacity: 0;
 }
 .input input:focus + label, 
 .input input:not(:placeholder-shown) + label{
     --nx-color-dark: #8C8C8C;
     position: absolute;
-    left: 10px;
-    top: -70%;
+    /* left: 28%; */
+    top: 10%;
+    transform: translate(-50%,0%);
     font-size: 0.65rem;
     color: var(--nx-color-dark);
 }
