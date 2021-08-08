@@ -1,13 +1,10 @@
-.details .collapse .minus{
+.details .collapse .minus,
+.details[open] .collapse .plus{
     display: none;
 }
 
 .details[open] .collapse .minus{
     display: block;
-}
-
-.details[open] .collapse .plus{
-    display: none;    
 }
 
 .collapse{
@@ -20,7 +17,7 @@
     justify-content: space-between;
     background-color: var(--nx-color-dark);
     padding: 0 1.25rem;
-    font-size: 1.15rem;
+    font-size: var(--nx-h2);
     outline: none;
 }
 
@@ -29,4 +26,10 @@
     background-color: var(--nx-color-dark);
     padding: 2rem 1.25rem;
     margin-top: 0.05rem;
+}
+
+@media only screen and (min-width: 768px){
+    .collapse{
+        padding: 2.25rem 1.5rem;
+    }
 }

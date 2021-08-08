@@ -10,4 +10,29 @@
     --nx-h1: 1.75rem;
     --nx-h2: 1.15rem;
     --nx-h3: 1.1rem;
+
+    /* Padding for home text */
+    --title-pl: 0rem;
+    --title-pr: 0rem;
+}
+
+@media only screen and (min-width:768px){
+    :root{
+        /* Font sizes */
+    --nx-h1: 2.5rem;
+    --nx-h2: 1.25rem;
+    --nx-h3: 1.15rem;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    :root{
+        /* Font sizes */
+    --nx-h1: 3.125rem;
+    --nx-h2: 1.625rem;
+    --nx-h3: 1.25rem;
+    /* Padding for home text */
+    --title-pl: 2.5rem;
+    --title-pr: 2.5rem;
+    }
 }

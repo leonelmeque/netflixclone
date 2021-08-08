@@ -1,38 +1,46 @@
-/* Subscription form */
 .container{
+    margin: 0 auto;
     z-index: 10;
-    padding: 0 1rem;
+    gap: 1rem;
+    width: 100%;
+    max-width: 650px;
 }
 
 .form{
     display: flex;
-    flex-flow: column;
-    text-align: center;
+    flex-flow: row wrap;
+    gap: 1rem;
+    width: 100%;
     justify-content: center;
+    align-items: center;
 }
 
 .formTitle{
-    padding: 0 1.5rem;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 1rem 0;
 }
 
 .formInput{
-    margin: 1rem 0;
+   flex: 1 1 390px;
 }
 
-@media only screen and (min-width:1024px){
+@media only screen and (min-width:768px){
+    
+}
+
+@media only screen and (min-width: 1024px){
     .form{
-        flex-flow: row wrap;
+        gap: 0;
     }
-    .formTitle{
-        width: 100%;
-    }
-
-    .formInput{
-        width: 80%;
-        margin: 0;
+    .jumboButton, 
+    .jumboInput input{
+        height: 60px !important;
+        border-radius: unset !important;
+        font-size: 1.75rem !important;
     }
 
-    .formBtn{
-        width: 20%;
+    .jumboButton {
+        margin: 0 0 0 .15rem
     }
 }

@@ -1,9 +1,10 @@
+import React from 'react'
 import styles from "./index.module.css"
 import PropTypes from 'prop-types'
 
- const Input = React.forwardRef(({inputName,placeholder, ...args },ref)=>{
+ const Input = React.forwardRef(({inputName,placeholder,className, ...args },ref)=>{
     return(
-        <label className={styles.input}>
+        <label className={[styles.input, className].join(" ")}>
             <input
                 ref={ref}
                 data-testid="input" 

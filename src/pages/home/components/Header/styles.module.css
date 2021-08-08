@@ -14,7 +14,7 @@
     flex-flow: wrap column;
     z-index: 5;
     color: white;
-    max-width: 668px;
+    max-width: 500px;
 }
 
 .container::before{
@@ -44,9 +44,23 @@
     z-index: 0;
 }
 
+.h1{
+    font-size: var(--nx-h1);
+}
+
+.h2{
+    font-size: var(--nx-h2);
+}
+
 @media only screen and (min-width:768px){
     .header{
         min-height: 733px;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    .container{
+        max-width: 600px;
     }
 }
 

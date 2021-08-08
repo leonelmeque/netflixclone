@@ -25,7 +25,7 @@ const Accordion= React.forwardRef(({label,dropdownText},ref)=>{
             <summary  className={styles.collapse}>
                 {label} 
             <span className={styles.plus}>
-            <Plus />
+            <Plus  />
             </span> 
             <span className={styles.minus}>
                 <Minus />
