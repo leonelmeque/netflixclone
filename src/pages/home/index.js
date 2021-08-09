@@ -6,8 +6,14 @@ import React from 'react'
 import { homeData } from '../../utilities/constants/static-text'
 import Header from './components/Header/Header'
 import SubForm from "./components/SubscriptonForm/SubForm"
+import Head from 'next/head'
 
 const Home = () => (
+    <>
+    <Head>
+        <title>Netflix Clone Home Page</title>
+        <meta name="description" content="Netflix clone" />
+    </Head>
     <div style={{ background: "#222" }}>
         <nav className={styles.nav}>
             <div className={styles.brandLogo} aria-labelledby="Company name">
@@ -107,6 +113,14 @@ const Home = () => (
         {/* Footer component goes here */}
         <Footer />
     </div>
+    </>
 )
+
+export async function getStaticProps(context) {
+    // There's is nothing to be returned now
+    return {
+        props: {}
+    }
+}
 
 export default Home
