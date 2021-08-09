@@ -16,7 +16,7 @@ const SubForm = ({...args}) => {
             <Input className={styles.jumboInput} inputName="hero-signup" type="email" placeholder="Email Address" autoComplete />
             </div>
             <div className={styles.formBtn}>
-                <Button className={styles.jumboButton} label="Get Started" variant="primary" size="md" />
+                <Button className={styles.jumboButton} icon="ChevronRight" label="Get Started" variant="primary" size="md" />
             </div>
      </form>
     </div>
