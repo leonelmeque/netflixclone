@@ -5,7 +5,6 @@ import * as Icons from 'react-feather'
 
 const Button = React.forwardRef( ({label,variant,size,className,icon, ...args},ref)=> {
     const Icon = icon ? Icons[icon] : <></>
-    console.log(Icon)
     return (
         <button ref={ref} className={[styles.nxBtn,styles[variant],styles[size],className].join(" ")} {...args}>
                     <span>{label}</span>

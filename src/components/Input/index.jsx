@@ -10,6 +10,7 @@ import PropTypes from 'prop-types'
                 data-testid="input" 
                 id={`id-nx-input-${inputName}`}
                 placeholder={placeholder}
+                autoComplete="false"
                 {...args}
                 />
             <label htmlFor={`id-nx-input-${inputName}`}>

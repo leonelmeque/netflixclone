@@ -1,5 +1,4 @@
 .footer{
-   
     background-color: #000;
     color: var(--nx-color-dark);
 }
@@ -13,7 +12,7 @@
 .list{
     display: flex;
     flex-flow: row wrap;
-    justify-content: start;
+    justify-content: flex-start;
     width: 100%;
     font-size: .85rem;
     margin-top: 1.5rem;

@@ -1,12 +1,29 @@
 import styles from "./index.module.css"
 
-const Footer = ()=> (
+const Footer = ({showOnLogin, showOnRoot})=> (
     <footer className={styles.footer}>
     <div className={styles.container}>
     <a href="">
-        Questions? Call 1-844-505-2993
+       {showOnRoot && 'Questions? Call 1-844-505-2993'}
+       {showOnLogin && 'Questions? Conctact us.'}
     </a>
-    <ul className={styles.list}>
+
+    {
+        showOnLogin && (
+        <ul className={styles.list}>
+            <li className={styles.listItem}><span>FAQ</span></li>
+            <li className={styles.listItem}><span>Help Center</span></li>
+            <li className={styles.listItem}><span>Terms of use</span></li>
+            <li className={styles.listItem}><span>Privacy</span></li>
+            <li className={styles.listItem}><span>Cookie Preferences</span></li>
+            <li className={styles.listItem}><span>Corporate Information</span></li>
+        </ul>
+        )
+    }
+
+   {
+       showOnRoot && (
+        <ul className={styles.list}>
         <li className={styles.listItem}><span>FAQ</span></li>
         <li className={styles.listItem}><span>Help Center</span></li>
         <li className={styles.listItem}><span>Account</span></li>
@@ -25,6 +42,8 @@ const Footer = ()=> (
         {/* <li className={styles.listItem}><span>Redeem Gift Cards</span></li>
         <li className={styles.listItem}><span>Netflix Originals</span></li> */}
     </ul>
+       )
+   }
     </div>
 </footer>
 )

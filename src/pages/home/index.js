@@ -9,7 +9,7 @@ import SubForm from "./components/SubscriptonForm/SubForm"
 import Head from 'next/head'
 
 const Home = () => (
-    <>
+    <div>
     <Head>
         <title>Netflix Clone Home Page</title>
         <meta name="description" content="Netflix clone" />
@@ -32,7 +32,7 @@ const Home = () => (
                 </div>
                 <div className={styles.serviceTv}>
                     <img src="/images/tv.png" alt="tv" />
-                    <video autoPlay muted loop playsInline>
+                    <video  muted loop playsInline>
                         <source src="/video/video-tv-0819.m4v" type="video/mp4" />
                     </video>
                 </div>
@@ -111,9 +111,9 @@ const Home = () => (
             <SubForm />
         </section>
         {/* Footer component goes here */}
-        <Footer />
+        <Footer showOnRoot/>
     </div>
-    </>
+    </div>
 )
 
 export async function getStaticProps(context) {
