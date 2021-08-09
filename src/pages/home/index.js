@@ -111,7 +111,7 @@ const Home = () => (
             <SubForm />
         </section>
         {/* Footer component goes here */}
-        <Footer />
+        <Footer showOnRoot/>
     </div>
     </>
 )

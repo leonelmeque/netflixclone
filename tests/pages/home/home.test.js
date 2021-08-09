@@ -1,4 +1,4 @@
-import {fireEvent, render} from '@testing-library/react'
+import {render} from '@testing-library/react'
 import Home from "@/pages/home"
 
 describe("@pages/home test suit",()=>{
