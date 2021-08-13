@@ -1,4 +1,8 @@
+/* -- Start of Common rules */
 
+/* -- End of Common rules */
+
+/* -- Start of Button rules */
 .nxBtn {
     outline: hidden;
     padding: 0 1rem;
@@ -10,6 +14,15 @@
     gap:0.15rem;
 }
 
+.circleBtn{
+    width: 88px;
+    height: 88px;
+    border-radius: 99999px;
+    background: none;
+    border: 1px solid var(--nx-color-white);
+}
+
+/* sizes */
 .sm{
     height: 32px;
     font-size: 0.85rem;
@@ -19,9 +32,44 @@
 
 .md{
     height: 40px;
+    font-size: 1rem;
 }
 
+.lg{
+    height: 48px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* variants */
 .primary{
     background-color: var(--nx-color-red);
     color: white;
 }
+
+.secondary{
+    background-color: var(--nx-color-white);
+    color: var(--nx-color-dark);
+    font-weight: 700;
+}
+
+.tertiary{
+    --nx-color-dark:grey; 
+    background: var(--nx-color-dark);
+    border: 1px solid var(--nx-color-dark);
+    color: var(--nx-color-white);
+}
+
+.text{
+
+}
+
+/* States */
+.tertiary:hover{
+    border-color: white;
+    color: white;
+}
+/* -- End of Button rules */
+
+
+

@@ -1,0 +1,45 @@
+/* Start of hero header rules */
+.hero{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: rgb(92, 92, 92);
+    z-index: 0;
+}
+
+.trailer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;   
+    height: 100%;
+    z-index: -1;
+}
+
+.description{
+    max-width: 500px;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--nx-color-white);
+}
+
+.ctaContainer{
+    color: white;
+    z-index: 5;
+}
+
+.ctaButtons{
+    display: flex;
+    gap:1rem;
+}
+
+.sound{
+
+}
+
+.parentalGuidance{
+    
+}
+/* End of hero header rules */

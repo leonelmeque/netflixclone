@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from './index.module.css'
 import Input from '@/components/Input'
-import Button from '@/components/Button'
+import Button from '@/components/Button/Button'
 import Footer  from '@/components/Footer'
 const Login = () => {
     return (

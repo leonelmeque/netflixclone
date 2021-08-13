@@ -1,5 +1,5 @@
 import styles from "./styles.module.css"
-import Button from '@/components/Button'
+import Button from '@/components/Button/Button'
 import Accordion from "@/components/Accordion"
 import Footer from "@/components/Footer"
 import React from 'react'
