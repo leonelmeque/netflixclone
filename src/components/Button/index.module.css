@@ -1,5 +1,8 @@
 /* -- Start of Common rules */
-
+.nxBtn,
+.circleBtn{
+    display: flex;
+}
 /* -- End of Common rules */
 
 /* -- Start of Button rules */
@@ -15,9 +18,9 @@
 }
 
 .circleBtn{
-    width: 88px;
-    height: 88px;
+    padding: .5rem;
     border-radius: 99999px;
+    justify-content: center;
     background: none;
     border: 1px solid var(--nx-color-white);
 }

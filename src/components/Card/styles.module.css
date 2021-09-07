@@ -1,0 +1,58 @@
+/* Start of movie card rules */
+.container{
+width: max(10rem, 100px, 280px);
+position: relative;
+}
+
+.movieCard,
+.movieCard:hover {
+  transition: all 0.3s ease-in-out;
+}
+.movieCard {
+  border-radius: 4px;
+  overflow: hidden;
+  width: max(10rem, 100px, 280px);
+}
+
+.movieCard:hover {
+  position: fixed;
+  top: 0;
+  transform: scale(1.2);
+  filter: drop-shadow(2px 4px 6px black);
+  /* z-index: 80; */
+  z-index: 10;
+}
+
+.movieCardContent {
+  display: none;
+}
+
+.movieCard:hover .movieCardContent {
+  display: block;
+  background: var(--nx-color-dark);
+  padding: 1rem 0.75rem 1rem 0.75rem;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.movieInfo {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.movieTags li {
+  display: inline-block;
+}
+
+.movieTags li:nth-child(n + 2)::before {
+  content: '•';
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0 0.35rem;
+  vertical-align: sub;
+  color: rgb(24, 24, 24);
+}
+/* End of movie card rules */

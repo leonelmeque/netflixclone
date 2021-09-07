@@ -45,19 +45,23 @@ const AppHeroHeader = () => {
     },[])
     return(
         <header className={styles.hero}>
-          <Layout row>
-          <div className={styles.heroCTAContainer}>
-          <div className={styles.heroMovieImageTitle}>
-            </div>
-            <p className={styles.description}>
+          <div className={styles.heroContent}>
+          <Layout column>
+          <div className={styles.heroMovieTitle}>
+             <h3>
+                Movie Title
+             </h3>
+             <p className={styles.description}>
                 Movie description and thing that are running whatever lets goo finish thiiiis.
             </p>
+            </div>
+           
             <div className={styles.ctaButtons}>
                 <Button label="Play" variant="secondary" icon="Play" size="lg" onClick={()=>{playTrailer()}}/>
                 <Button label="More Info" variant="tertiary" icon="Plus" size="lg" onClick={()=>{stopTrailer()}}/>
             </div>
-          </div>
              </Layout>
+          </div>
             <div className={styles.trailer}>
                 <VideoJs ref={videoPlayerRef} options={options} />
             </div>

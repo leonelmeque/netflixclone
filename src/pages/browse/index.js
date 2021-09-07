@@ -3,11 +3,10 @@ import React from 'react'
 import styles from './styles.module.css'
 import Button from '@/components/Button/Button'
 import { PlusCircle } from 'react-feather'
-import { gql } from '@apollo/client'
-import client from '@/services/api/apollo-client'
+import {useRouter} from 'next/router'
 
 const Browse = () => {
-    const buttonRef = React.useRef(null)
+    const router = useRouter()
     return (
         <>
             <Head>
@@ -29,7 +28,10 @@ const Browse = () => {
                         </h1>
                     </div>
                     <ul className={styles.profiles}>
-                        <li className={styles.account}>
+                        <li onClick={(e)=>{
+                            e.preventDefault();
+                            router.push("/app")
+                        }} className={styles.account}>
                             <div className={styles.accountAvatar}>
                                 <img src="/images/changes.png" alt="" />
                             </div>
@@ -53,34 +55,6 @@ const Browse = () => {
             </div>
         </>
     )
-}
-
-export async function getServerSideProps() {
-    // const { data } = await client.query({
-    //     query: gql`
-    //         query {
-    //             movies {
-    //              popular(first:10){
-    //               totalCount,
-    //               edges{
-    //                 node{
-    //                   title,
-    //                   backdrop(size:W780),
-    //                   popularityIndex
-    //                 }
-    //               }
-    //              }
-    //             }
-    //           }     
-    //     `
-    // })
-    // const {movies: {popular: {totalCount, edges}}} = data || {}
-    // for(const {node:{title, popularityIndex}} of edges){
-    //     console.log(`${title} | Popularity: ${popularityIndex}`)
-    // }
-    return {
-        props: {}
-    }
 }
 
 export default Browse;

@@ -3,7 +3,9 @@ import styles from './index.module.css'
 import Input from '@/components/Input'
 import Button from '@/components/Button/Button'
 import Footer  from '@/components/Footer'
+import {useRouter} from 'next/router'
 const Login = () => {
+    const router = useRouter()
     return (
         <>
             <Head>
@@ -24,7 +26,7 @@ const Login = () => {
                             </h1>
                         </div>
                         {/* write two input components */}
-                        <form onSubmit={(event)=>{event.preventDefault()}} className={styles.loginForm}>
+                        <form onSubmit={(event)=>{event.preventDefault(); router.push("/browse")}} className={styles.loginForm}>
                             <Input inputName="username" autoComplete="true" value="jonhndoe@domain.com" placeholder="Email or phone number" disabled/>
                             <Input inputName="password" autoComplete="true" value="jodhndoe@domain.com" placeholder="Password" type="password" disabled/>
                             <Button type="submit" label="Sign in" />

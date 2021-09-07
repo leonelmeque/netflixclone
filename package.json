@@ -17,9 +17,12 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-feather": "^2.0.9",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
     "video.js": "^7.14.3"
   },
   "devDependencies": {
+    "@brainhubeu/react-carousel": "^2.0.4",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@testing-library/dom": "^8.1.0",
@@ -34,6 +37,8 @@
     "jest": "^27.0.6",
     "jest-dom": "^4.0.0",
     "postcss": "^7",
+    "prettier": "2.3.2",
+    "react-multi-carousel": "^2.6.5",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "^4.4.2"
   },

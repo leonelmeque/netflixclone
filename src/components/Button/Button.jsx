@@ -16,17 +16,18 @@ const Button = React.forwardRef( (props,ref)=> {
 })
 
 const CircleButton = React.forwardRef((props,ref)=>{
-     const {icon, ...args} = props
+     const {icon, size,...args} = props
      const Icon = icon ? Icons[icon] : <></>
     return(
         <button ref={ref} className={styles.circleBtn}  {...args}>
-            <Icon />
+            <Icon size={size}/>
         </button>
     )
 })
 
 // Display names
 Button.displayName = "Button"
+CircleButton.displayName = "CircleButton"
 
 export default Button
 export {CircleButton}
