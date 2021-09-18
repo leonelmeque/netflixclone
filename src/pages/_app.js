@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import "../styles/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "../styles/slick-theme.css";
 
 
 /* istanbul ignore next */

@@ -1,12 +1,12 @@
 import styles from './styles.module.css';
 import Layout from '@/components/Layout';
 import React from 'react';
-import Spacer from '@/components/Spacer/Spacer';
-import MovieCard from '@/components/Card/Card';
+import Spacer from '@/components/@ui-elements/Spacer/Spacer';
+import MovieCard from '@/components/@ui-elements/Card/Card';
 
 import { useQuery } from '@apollo/client';
 import client from '@/services/api/apollo-client';
-import Carousel from '@/components/Carousel/Carousel';
+import Carousel from '@/components/@ui-elements/Carousel/Carousel';
 
 const StreamingCatalog = (props) => {
   const { catalogTitle, query,resource} = props || {};
@@ -19,12 +19,12 @@ const StreamingCatalog = (props) => {
       setCatalog(edges)
     }
     return () => {
-      console.log(catalog);
+  
     };
   });
 
   if (loading) {
-    return <>Loading</>;
+    return <div style={{fontSize:34, color:'white'}}>Loading</div>;
   }
   return (
     <div className={styles.container}>
@@ -34,7 +34,7 @@ const StreamingCatalog = (props) => {
         {/* TODO: add react carousel */}
         <Carousel>
           {catalog?.map(({ node }) => (
-            <MovieCard poster={node.backdrop} />
+            <MovieCard poster={node.backdrop} genres={node.genres} />
           ))}
         </Carousel>
       </Layout>

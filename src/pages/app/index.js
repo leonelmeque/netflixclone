@@ -1,7 +1,7 @@
 import AppHeroHeader from '@/components/AppHeroHeader'
 import styles from './styles.module.css'
 import StreamingCatalog from './components/streaming-catalog/StreamingCatalog'
-import Spacer from '@/components/Spacer/Spacer'
+import Spacer from '@/components/@ui-elements/Spacer/Spacer'
 import { FETCH_MOVIES } from '@/services/api/imdbApi'
 
 
@@ -15,6 +15,9 @@ const App = () => {
                     <Spacer size="sm" />
                     <StreamingCatalog catalogTitle="Trending on Netflix" query={FETCH_MOVIES('trending')} resource={'trending'} />
                     <Spacer size="sm" />
+                    <StreamingCatalog catalogTitle="Now Playing" query={FETCH_MOVIES('nowPlaying')} resource={'nowPlaying'} />
+                    <Spacer size="sm" />
+                    <StreamingCatalog catalogTitle="Top Rated" query={FETCH_MOVIES('topRated')} resource={'topRated'} />
                     {/* <StreamingCatalog catalogTitle="Popular on Netflix" /> */}
                 </div>
             </div>

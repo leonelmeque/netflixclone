@@ -3,7 +3,7 @@ import { gql } from '@apollo/client'
 /**
  * @description Fetch Movies
  */
-export const FETCH_MOVIES = (criteria)=>gql`
+export const FETCH_MOVIES = (criteria,bdSize=780) => gql`
             query GetPopular {
                 movies {
                  ${criteria}(first:20){
@@ -12,8 +12,12 @@ export const FETCH_MOVIES = (criteria)=>gql`
                     node{
                       id,
                       title,
-                      backdrop(size:W780),
-                      popularityIndex
+                      overview,
+                      backdrop(size:W${bdSize}),
+                      popularityIndex,
+                      genres{
+                         name
+                       }
                     }
                   }
                  }

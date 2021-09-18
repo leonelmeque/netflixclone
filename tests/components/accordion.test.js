@@ -1,5 +1,5 @@
 import {fireEvent, render} from '@testing-library/react'
-import Accordion from '@/components/Accordion'
+import Accordion from '@/components/@ui-elements/Accordion'
 
 describe("@component/Accordion test suit",()=>{
     test("Renders correctly",()=>{

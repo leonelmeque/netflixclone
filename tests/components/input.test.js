@@ -1,5 +1,5 @@
 import {fireEvent, render} from '@testing-library/react'
-import Input from '@/components/Input'
+import Input from '@/components/@ui-elements/Input'
 
 describe("@component/Input test suit",()=>{
     test("Renders correctly",()=>{

@@ -1,7 +1,7 @@
 import styles from "./styles.module.css"
-import Button from '@/components/Button/Button'
-import Accordion from "@/components/Accordion"
-import Footer from "@/components/Footer"
+import Button from '@/components/@ui-elements/Button/Button'
+import Accordion from "@/components/@ui-elements/Accordion"
+import Footer from "@/components/@ui-elements/Footer"
 import React from 'react'
 import { homeData } from '../../utilities/constants/static-text'
 import Header from './components/Header/Header'

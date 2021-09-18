@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./styles.module.css"
-import Button from '@/components/Button/Button'
-import Input from '@/components/Input'
+import Button from '@/components/@ui-elements/Button/Button'
+import Input from '@/components/@ui-elements/Input'
 
 const SubForm = ({...args}) => {
     return ( 
