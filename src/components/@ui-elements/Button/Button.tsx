@@ -1,9 +1,29 @@
 import styles from "./index.module.css"
-import React from 'react'
+import * as React from 'react'
 import * as Icons from 'react-feather'
 
+
+type ButtonProps = {
+  label: string;
+  variant: 'primary' | 'secondary' | 'tertiary' | 'text';
+  size: 'lg' | 'md' | 'sm';
+  className?: string;
+  icon?: string;
+  onClick?(
+    event: React.MouseEvent<HTMLButtonElement>
+  ): void;
+};
+
+type CircleButtonProps = {
+    icon?: string,
+    size:number,
+    onClick?(event: React.MouseEvent<HTMLButtonElement>): void;
+    style?:object
+}
+
+
 // Regular button
-const Button = React.forwardRef( (props,ref)=> {
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props,ref)=> {
     const {label, variant, size, className, icon, ...args} = props
     const Icon = icon ? Icons[icon] : <></>
 
@@ -15,7 +35,7 @@ const Button = React.forwardRef( (props,ref)=> {
     )
 })
 
-const CircleButton = React.forwardRef((props,ref)=>{
+const CircleButton = React.forwardRef<HTMLButtonElement, CircleButtonProps>((props,ref)=>{
      const {icon, size,...args} = props
      const Icon = icon ? Icons[icon] : <></>
     return(

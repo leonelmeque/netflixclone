@@ -52,7 +52,6 @@ const AppHeroHeader = () => {
   };
 
   React.useEffect(() => {
-    console.log(random);
     if (!loading) {
       const {
         movies: { ['popular']: { edges } = {} },
@@ -60,7 +59,7 @@ const AppHeroHeader = () => {
       setCatalog(edges);
     }
     return () => {
-      console.log(catalog);
+  
     };
   });
   return (

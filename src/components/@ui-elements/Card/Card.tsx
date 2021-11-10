@@ -3,7 +3,17 @@ import { CircleButton } from '../Button/Button';
 import Spacer from '../Spacer/Spacer';
 import VideoJs from '../../VideoJs';
 import styles from './styles.module.css';
+import YouTube from 'react-youtube'
 
+type MovieCard = {
+  isMovieInList: boolean;
+  hasLike: boolean;
+  hasDeslike: boolean;
+  poster: string;
+  genres: string[];
+  isSkeleton?: boolean;
+  trailerUrl?:string | string []
+}
 const MovieCard = (props) => {
   const {
     isMovieInList,
@@ -11,9 +21,12 @@ const MovieCard = (props) => {
     hasDeslike,
     poster,
     genres,
+    isSkeleton,
+    trailerUrl
   } = props;
   const _genres = genres?.slice(0, 3);
   const videoPlayerRef = React.useRef(null);
+  const [isHovered, setIsHovered] = React.useState(false) 
   const [options, setOptions] = React.useState({
     autoplay: false,
     responsive: true,
@@ -26,13 +39,28 @@ const MovieCard = (props) => {
       },
     ],
   });
+
+  const playTrailer = ()=>{
+    new Promise((resolve, reject)=>{
+      resolve(setTimeout(()=>{console.log('Playing video')}, 2000))
+    })
+  }
+
+  const stopTrailer = () => {
+    console.log('Stopping video')
+  }
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      onMouseEnter={playTrailer}
+      onMouseLeave={stopTrailer}>
       <div className={styles.movieCard}>
         {/* <VideoJs ref={videoPlayerRef} options={options} /> */}
-        <img
-        style={{width:'100%'}}
-        src={poster}/>
+        {isHovered ? (
+          <YouTube videoId={null}  />
+        ) : (
+          <img style={{ width: '100%' }} src={poster} />
+        )}
         <div className={styles.movieCardContent}>
           <div className={styles.controls}>
             <CircleButton

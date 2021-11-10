@@ -9,32 +9,45 @@ import client from '@/services/api/apollo-client';
 import Carousel from '@/components/@ui-elements/Carousel/Carousel';
 
 const StreamingCatalog = (props) => {
-  const { catalogTitle, query,resource} = props || {};
+  const { catalogTitle, query, resource } = props || {};
   const [catalog, setCatalog] = React.useState(null);
-  const {loading, error, data} = useQuery(query,{client: client})
+  const { loading, error, data } = useQuery(query, {
+    client: client,
+  });
 
   React.useEffect(() => {
     if (!loading) {
-      const {movies:{[resource]:{edges}={}}} = data || {}
-      setCatalog(edges)
+      const {
+        movies: { [resource]: { edges } = {} },
+      } = data || {};
+      setCatalog(edges);
     }
-    return () => {
-  
-    };
+    return () => {};
   });
 
   if (loading) {
-    return <div style={{fontSize:34, color:'white'}}>Loading</div>;
+    return (
+      <div style={{ fontSize: 34, color: 'white' }}>
+        <MovieCard />
+      </div>
+    );
   }
   return (
     <div className={styles.container}>
       <Layout column>
-        <h3>{catalogTitle}</h3>
+        <div className={styles.seeMoreTitle}>
+          <h2>{catalogTitle}</h2>
+          <p>Explore More</p>
+        </div>
         <Spacer size='sm' />
         {/* TODO: add react carousel */}
         <Carousel>
           {catalog?.map(({ node }) => (
-            <MovieCard poster={node.backdrop} genres={node.genres} />
+            <MovieCard
+              poster={node.backdrop}
+              genres={node.genres}
+              // trailerUrl = {}
+            />
           ))}
         </Carousel>
       </Layout>
