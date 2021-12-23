@@ -1,5 +1,5 @@
 import styles from './styles.module.css';
-import Layout from '@/components/Layout';
+import Layout from '@/components/@ui-elements/Layout';
 import React from 'react';
 import Spacer from '@/components/@ui-elements/Spacer/Spacer';
 import MovieCard from '@/components/@ui-elements/Card/Card';

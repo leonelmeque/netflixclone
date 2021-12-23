@@ -2,8 +2,8 @@ import React from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
 
-const VideoJs = React.forwardRef(({options},ref) => {
-    const videoRef = React.useRef(null);
+const VideoJs = React.forwardRef<Ref>(({options},ref) => {
+    const videoRef = React.useRef<any>(null);
 
     const VideoHtml = ( props ) => (
         <div data-vjs-player>

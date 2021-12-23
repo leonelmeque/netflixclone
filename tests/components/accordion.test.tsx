@@ -3,12 +3,17 @@ import Accordion from '@/components/@ui-elements/Accordion'
 
 describe("@component/Accordion test suit",()=>{
     test("Renders correctly",()=>{
-        const {container} = render(<Accordion />)
+        const {container} = render(<Accordion label='Some time of label' dropdownText='Some dropdonw text' />)
         expect(container).toBeVisible()
     })
 
     test("Toggle function works correclty",()=>{
-        const {getByTestId } = render(<Accordion />)
+        const { getByTestId } = render(
+          <Accordion
+            label='Some time of label'
+            dropdownText='Some dropdonw text'
+          />
+        );
         const accordion = getByTestId("accordion")
         expect(accordion).toBeTruthy()
         fireEvent.click(accordion)

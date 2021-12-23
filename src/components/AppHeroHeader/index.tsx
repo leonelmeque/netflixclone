@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './index.module.css';
 import Button from '@/components/@ui-elements/Button/Button';
 import VideoJs from '@/components/VideoJs';
-import Layout from '@/components/Layout';
+import Layout from '@/components/@ui-elements/Layout';
 import Spacer from '../@ui-elements/Spacer/Spacer';
 import { FETCH_MOVIES } from '@/services/api/imdbApi';
 import { useQuery } from '@apollo/client';
@@ -21,10 +21,10 @@ import client from '@/services/api/apollo-client';
  *
  */
 const AppHeroHeader = () => {
-  const random = Math.random() * 10;
+  const random:number = Math.random() * 10;
   const [catalog, setCatalog] = React.useState(null);
   const { loading, error, data } = useQuery(
-    FETCH_MOVIES('popular', '1280'),
+    FETCH_MOVIES('popular', 1280),
     {
       client: client,
     }

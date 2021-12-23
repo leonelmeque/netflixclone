@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styles from './index.module.css';
-import PropTypes from 'prop-types';
 
 interface InputProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {

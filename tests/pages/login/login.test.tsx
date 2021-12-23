@@ -1,14 +1,21 @@
 import {render,fireEvent} from '@testing-library/react'
-import Home from "@/pages/home"
 import Login from '@/pages/login'
 import * as nextRouter from 'next/router'
 
 describe("@pages/login test suit",()=>{
     beforeEach(()=>{
-        nextRouter.useRouter = jest.fn()
-        nextRouter.useRouter.mockImplementation(()=>({route:'/', push(){
-            history.pushState({},'','/login')
-        }}))
+        // let mockedRouter = nextRouter.useRouter
+         // mockedRouter = <jest.Mock
+        // nextRouter.useRouter.mockImplementation(()=>({route:'/', push(){
+        //     history.pushState({},'','/login')
+        // }}))
+
+        (nextRouter.useRouter as jest.MockedFunction<any>).mockReturnedValueOnce({
+            router:'/',
+            push(){
+                history.pushState({},'','/login')                
+            }
+        })
 
     })
     test("Renders correctly", ()=>{

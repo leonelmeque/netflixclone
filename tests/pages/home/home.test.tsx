@@ -1,5 +1,5 @@
 import {render} from '@testing-library/react'
-import Home from "@/pages/home"
+import Home from "@/pages/index"
 
 describe("@pages/home test suit",()=>{
     test("Renders corretly",()=>{

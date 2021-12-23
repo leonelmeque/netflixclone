@@ -1,10 +1,10 @@
 import AppHeroHeader from '@/components/AppHeroHeader'
-import styles from './styles.module.css'
+import styles from '@/ui-modules/app/styles.module.css'
 import Spacer from '@/components/@ui-elements/Spacer/Spacer'
 import { FETCH_MOVIES } from '@/services/api/imdbApi'
 import Dynamic from 'next/dynamic'
 
-const StreamingCatalog = Dynamic(() => import('./components/streaming-catalog/StreamingCatalog'),{ssr: false})
+const StreamingCatalog = Dynamic(() => import('@/components/StreamingCatalog/StreamingCatalog'),{ssr: false})
 
 const App = () => {
     return (

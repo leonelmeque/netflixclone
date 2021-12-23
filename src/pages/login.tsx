@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from './index.module.css'
+import styles from '@/ui-modules/login/index.module.css'
 import Input from '@/components/@ui-elements/Input'
 import Button from '@/components/@ui-elements/Button/Button'
 import Footer  from '@/components/@ui-elements/Footer'
