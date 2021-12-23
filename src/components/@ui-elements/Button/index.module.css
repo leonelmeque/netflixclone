@@ -1,0 +1,78 @@
+/* -- Start of Common rules */
+.nxBtn,
+.circleBtn{
+    display: flex;
+}
+/* -- End of Common rules */
+
+/* -- Start of Button rules */
+.nxBtn {
+    outline: hidden;
+    padding: 0 1rem;
+    border-radius: 0.15rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.15rem;
+}
+
+.circleBtn{
+    padding: .5rem;
+    border-radius: 99999px;
+    justify-content: center;
+    background: none;
+    border: 1px solid var(--nx-color-white);
+}
+
+/* sizes */
+.sm{
+    height: 32px;
+    font-size: 0.85rem;
+    padding: 0 0.75rem;
+    font-weight: 400;
+}
+
+.md{
+    height: 40px;
+    font-size: 1rem;
+}
+
+.lg{
+    height: 48px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* variants */
+.primary{
+    background-color: var(--nx-color-red);
+    color: white;
+}
+
+.secondary{
+    background-color: var(--nx-color-white);
+    color: var(--nx-color-dark);
+    font-weight: 700;
+}
+
+.tertiary{
+    --nx-color-dark:grey; 
+    background: var(--nx-color-dark);
+    border: 1px solid var(--nx-color-dark);
+    color: var(--nx-color-white);
+}
+
+.text{
+
+}
+
+/* States */
+.tertiary:hover{
+    border-color: white;
+    color: white;
+}
+/* -- End of Button rules */
+
+
+

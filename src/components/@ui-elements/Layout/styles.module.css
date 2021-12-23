@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    padding: 0 2rem;
+    width: 100%;
+    /* max-width: 100%;
+    overflow-x: hidden; */
+}
+
+.row {
+    flex-flow: row wrap;
+}
+
+.column {
+    flex-flow: column;
+}

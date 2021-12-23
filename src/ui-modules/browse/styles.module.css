@@ -1,0 +1,107 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    padding: 2rem 3rem;
+    z-index: 10;
+    top:0;
+}
+
+.brandLogo img{
+    height: min(3rem,5vw,2rem);
+}
+
+
+.container,.profiles,.addProfileIcon{
+    display: flex;
+}
+
+.container{
+    --nx-color-dark: #141414;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: var(--nx-color-dark);
+    color: var(--nx-color-white);
+    position: relative;
+}
+
+.profiles{
+    margin: 1.25rem auto 0;
+}
+
+.h1{
+    font-size: clamp(1.75rem,3.5vw,5rem);
+}
+
+.profileContainerTitle,
+.addProfileTitle,
+.accountName
+{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0.3rem 0 ;
+}
+
+.accountAvatar{
+    border-radius: .25rem;
+}
+
+.addProfileTitle,
+.accountName{
+    --nx-color-dark:#adadad;
+    color: var(--nx-color-dark);
+    font-size: clamp(.65rem,1vw,2rem);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.profiles{
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.accountAvatar, .addProfileIcon{
+    width: clamp(5rem,10vw,10rem);
+    height: clamp(5rem,10vw,10rem);
+    cursor: pointer;
+    padding: 0.125rem;
+}
+
+.account:hover .accountAvatar,
+.addProfile:hover .addProfileIcon
+{
+    background:rgb(206, 206, 206);
+}
+
+.addProfile:hover .addProfileTitle,
+.account:hover .accountName{
+    color: rgb(206, 206, 206);
+}
+
+.accountAvatar img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.accountAvatar img, 
+.accountAvatar,
+.addProfileIcon{
+    border-radius: .25rem;
+}
+
+.addProfileIcon{
+    justify-content: center;
+    align-items: center;
+}
+
+.manageProfileContainer{
+    margin: 2.5rem 0 0 0;
+}
+
+.manageProfileContainer > * {
+    margin:0 auto;
+}

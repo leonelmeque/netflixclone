@@ -1,0 +1,40 @@
+.details{
+    cursor: pointer;
+}
+.details .collapse .minus,
+.details[open] .collapse .plus{
+    display: none;
+}
+
+.details[open] .collapse .minus{
+    display: block;
+}
+
+.collapse{
+    --nx-color-dark: #333;
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+    height: 48px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--nx-color-dark);
+    padding: 0 1.25rem;
+    font-size: var(--nx-h2);
+    outline: none;
+}
+
+.collapseInfo{
+    --nx-color-dark: #333;
+    background-color: var(--nx-color-dark);
+    padding: 2rem 1.25rem;
+    margin-top: .25%;
+    font-size: var(--nx-h2);
+}
+
+@media only screen and (min-width: 768px){
+    .collapse,
+    .collapseInfo{
+        padding: 2.25rem 2.25rem;
+    }
+}

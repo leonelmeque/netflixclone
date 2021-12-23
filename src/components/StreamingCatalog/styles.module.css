@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+  min-height: 250px;
+  position: relative;
+  color: var(--nx-color-white);
+}
+
+.seeMoreTitle{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.seeMoreTitle p{
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s ease-in-out ;
+}
+
+.seeMoreTitle:hover p{
+  visibility: visible;
+  opacity: 1;
+}
