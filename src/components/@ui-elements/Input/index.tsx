@@ -1,37 +1,21 @@
-import * as React from 'react';
+import React, { forwardRef, ForwardRefRenderFunction } from 'react';
 import styles from './index.module.css';
 
-interface InputProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  inputName: string;
-  placeholder: string;
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  inputname?: string;
 }
 
-const Input = React.forwardRef<
-  HTMLInputElement,
-  InputProps
->(
-  (
-    { inputName, className, placeholder, ...args },
-    ref
-  ): JSX.Element => {
-    return (
-      <label
-        className={[styles.input, className].join(' ')}>
-        <input
-          ref={ref}
-          data-testid='input'
-          id={`id-nx-input-${inputName}`}
-          placeholder={placeholder}
-          autoComplete='false'
-          {...args}
-        />
-        <label htmlFor={`id-nx-input-${inputName}`}>
-          {placeholder}
-        </label>
-      </label>
-    );
-  }
-);
 
-export default Input;
+const Input: ForwardRefRenderFunction<HTMLInputElement,InputProps> = (props, ref): JSX.Element => (
+  <label htmlFor='' className={`${styles.input}`}>
+    <input
+      ref={ref}
+      data-testid='input'
+      id={`id-nx-input-${props.inputname}`}
+      autoComplete='false'
+      {...props}
+    />
+  </label>
+);
+Input.displayName = "Input"
+export default forwardRef(Input)

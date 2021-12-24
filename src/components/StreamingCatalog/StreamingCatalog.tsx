@@ -17,9 +17,7 @@ const StreamingCatalog = (props) => {
 
   React.useEffect(() => {
     if (!loading) {
-      const {
-        movies: { [resource]: { edges } = {} },
-      } = data || {};
+      const {movies: { [resource]: { edges } }}:any = data || {};
       setCatalog(edges);
     }
     return () => {};

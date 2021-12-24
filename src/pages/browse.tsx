@@ -49,7 +49,7 @@ const Browse = () => {
                         </li>
                     </ul>
                     <div className={styles.manageProfileContainer}>
-                        <Button variant="tertiary" label="MANAGE PROFILES" />
+                        <Button variant="tertiary" size='lg' label="MANAGE PROFILES" />
                     </div>
                 </div>
             </div>

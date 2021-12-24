@@ -4,6 +4,7 @@ import Input from '@/components/@ui-elements/Input'
 import Button from '@/components/@ui-elements/Button/Button'
 import Footer  from '@/components/@ui-elements/Footer'
 import {useRouter} from 'next/router'
+
 const Login = () => {
     const router = useRouter()
     return (
@@ -27,9 +28,9 @@ const Login = () => {
                         </div>
                         {/* write two input components */}
                         <form onSubmit={(event)=>{event.preventDefault(); router.push("/browse")}} className={styles.loginForm}>
-                            <Input inputName="username" autoComplete="true" value="jonhndoe@domain.com" placeholder="Email or phone number" disabled/>
-                            <Input inputName="password" autoComplete="true" value="jodhndoe@domain.com" placeholder="Password" type="password" disabled/>
-                            <Button type="submit" label="Sign in" />
+                            <Input inputname="username" aria-autocomplete="inline" value="jonhndoe@domain.com" placeholder="Email or phone number" disabled/>
+                            <Input inputname="password" aria-autocomplete="inline" value="jodhndoe@domain.com" placeholder="Password" type="password" disabled/>
+                            <Button type="submit" variant='primary' size='lg' label="Sign in" />
                         </form>
                         <div className={styles.loginSettings}>
                             <div className={styles.checkboxContainer}>
