@@ -2,6 +2,7 @@
 .nxBtn,
 .circleBtn{
     display: flex;
+    cursor: pointer;
 }
 /* -- End of Common rules */
 
@@ -15,6 +16,7 @@
     justify-content: center;
     align-items: center;
     gap:0.15rem;
+    border: none;
 }
 
 .circleBtn{
@@ -63,11 +65,10 @@
     color: var(--nx-color-white);
 }
 
-.text{
-
-}
-
 /* States */
+.primary:hover{
+    background-color: rgb(187, 21, 21);
+}
 .tertiary:hover{
     border-color: white;
     color: white;

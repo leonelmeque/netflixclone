@@ -4,6 +4,7 @@
   min-height: 250px;
   position: relative;
   color: var(--nx-color-white);
+  z-index: 1;
 }
 
 .seeMoreTitle{
