@@ -1,5 +1,5 @@
 import React from 'react';
-import { CircleButton } from '../Button/Button';
+import  CircleButton  from '@/components/common/CircleButton';
 import Spacer from '../Spacer/Spacer';
 import VideoJs from '../../VideoJs';
 import styles from './styles.module.css';
@@ -66,28 +66,28 @@ const MovieCard = (props) => {
             <CircleButton
               onClick={(e) => {}}
               size={16}
-              icon='Play'
+              iconName='Play'
             />
             <CircleButton
               onClick={(e) => {}}
               size={16}
-              icon={isMovieInList ? 'Check' : 'Plus'}
+              iconName={isMovieInList ? 'Check' : 'Plus'}
             />
             <CircleButton
               onClick={(e) => {}}
               size={16}
-              icon='ThumbsUp'
+              iconName='ThumbsUp'
             />
             <CircleButton
               onClick={(e) => {}}
               size={16}
-              icon='ThumbsDown'
+              iconName='ThumbsDown'
             />
             <CircleButton
               onClick={(e) => {}}
               style={{ marginLeft: 'auto' }}
               size={16}
-              icon='ChevronDown'
+              iconName='ChevronDown'
             />
           </div>
           <Spacer size='sm' />

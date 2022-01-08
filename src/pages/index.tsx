@@ -8,6 +8,7 @@ import Header from '@/ui-modules/home/Header/Header'
 import SubForm from "@/ui-modules/home/SubscriptonForm/SubForm"
 import Head from 'next/head'
 import Link from 'next/link'
+import Navbar from "@/components/Navbar"
 
 const Home = () => (
   <div>
@@ -16,6 +17,7 @@ const Home = () => (
       <meta name="description" content="Netflix clone" />
     </Head>
     <div style={{ background: "#222" }}>
+      <Navbar />
       <nav className={styles.nav}>
         <div className={styles.brandLogo} aria-labelledby="Company name">
           <img src="/nxlogo.svg" alt="" />
