@@ -4,7 +4,7 @@ import { render, fireEvent } from "@testing-library/react"
 describe("<Icon />", () => {
 	test("renders successfuly with correct name", () => {
 		const { container, getByLabelText } = render(
-			<Icon iconName='Play' />
+			<Icon iconName='Play' size={48}/>
 		)
 		expect(container).toBeTruthy()
         expect(getByLabelText('Play icon')).toBeTruthy()

@@ -41,18 +41,16 @@ const HeroHeader = (): JSX.Element => {
 				alt='Banner image'
 			/>
 			<Navbar />
-			<Container
-				maxW={"container.xl"}
-				position={"relative"}
-				top='50%'
-				left='50%'
-				transform={"translate(-50%,50%)"}
-			>
+			<Container maxW={"container.xl"} position={'relative'} >
 				<Box
 					maxW={"600px"}
 					width={"100%"}
 					margin={"0 auto"}
-					position={"relative"}
+					padding={'0 12px'}
+					position={'absolute'}
+					top='50%'
+					left='50%'
+					transform={"translate(-50%,50%)"}
 				>
 					<Box
 						color={"brand.white"}
