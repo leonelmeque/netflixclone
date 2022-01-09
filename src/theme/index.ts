@@ -6,7 +6,7 @@ import Button from './components/buttons'
 const overrides = {
     colors: colors,
     components: {
-        Button
+        Button:Button
     }
 }
 

@@ -1,35 +1,31 @@
-import { BoxProps } from "@chakra-ui/react"
 
-const center_div: BoxProps = {
-    justifyContent: 'center',
-
-}
 const button = {
     baseStyle: {
         fontWeight: 'bold',
         bg: 'brand.red',
         outline: 'hidden',
-        padding: '0 1rem',
+        padding: '12px 16px',
         'border-radius': '0.15rem',
-        display: 'flex',
+        display: 'inline-flex',
         'justify-content': 'center',
         'align-items': 'center',
-        border: 'none'
+        border: 'none',
+        
     },
     variants: {
         primary: {
-            backgroundColor: 'brand.red',
+            bg: 'brand.red',
             color: 'brand.white',
             _hover: {
-                backgroundColor: 'brand.red.hover'
+                bg: 'brand.red.hover'
             }
         },
         secondary: {
-            backgroundColor: 'brand.white',
+            bg: 'brand.white',
             color: 'brand.dark'
         },
         tertiary: {
-            backgroundColor: 'grey',
+            bg: 'grey',
             border: '1px solid grey',
             color: 'brand.white',
             _hover: {

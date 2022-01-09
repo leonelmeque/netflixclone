@@ -39,6 +39,12 @@
       ],
       "@/redux/*": [
         "src/redux"
+      ],
+       "@/types/*": [
+        "src/types"
+      ],
+       "@/theme/*": [
+        "src/theme"
       ]
     },
     "incremental": true
