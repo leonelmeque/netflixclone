@@ -1,0 +1,39 @@
+import Layout from "-components/@ui-elements/Layout"
+import { FunctionComponent, HTMLAttributes } from "react"
+import SignUp from "../Forms/Sigup"
+import NavbarWeb from "../Navbar/NavbarWeb"
+
+interface HeaderWebProps {}
+
+const baseStyles =
+	"sm:min-h-[37rem] sm:max-h-[37rem] lg:max-h-[43.7rem] relative"
+
+const HeaderWeb: FunctionComponent<HeaderWebProps> = () => {
+	return (
+		<header
+			data-testid='header-web'
+			role='banner'
+			className={`${baseStyles} before:z-10 before:content-[""] overlay before:bg-black`}
+		>
+			<img
+				src='/images/hero-img.jpeg'
+				alt='Banner image'
+				className='object-cover -z-20 overlay'
+			/>
+			<NavbarWeb />
+			<div className='sm:px-4 lg:max-w-2xl w-full mx-auto absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2'>
+				<div className='text-white text-center mb-3'>
+					<h1 className='sm:text-[2rem] md:text-5xl lg:text-6xl'>
+						Ultimate movies, Tv shows, and more.
+					</h1>
+					<p className='text-2xl'>
+						Watch anywhere. Cancel anytime
+					</p>
+				</div>
+				<SignUp />
+			</div>
+		</header>
+	)
+}
+
+export default HeaderWeb
