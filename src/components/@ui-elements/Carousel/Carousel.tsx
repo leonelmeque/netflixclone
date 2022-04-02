@@ -48,7 +48,7 @@ const Carousel = (props: CarouselProps): JSX.Element => {
 		<CarouselProvider
 			totalSlides={allChildren.length}
 			visibleSlides={5}
-			naturalSlideWidth={100}
+			naturalSlideWidth={200}
 			naturalSlideHeight={60}
 		>
 			<Slider className={`${styles.carousel}`}>

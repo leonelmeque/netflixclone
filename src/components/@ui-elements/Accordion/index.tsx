@@ -1,8 +1,6 @@
 import React from 'react'
 import {Plus, Minus} from "react-feather"
 import styles from "./index.module.css"
-import PropTypes from 'prop-types'
-
 
 type AccordionProps = {
     label: string,

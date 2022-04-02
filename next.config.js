@@ -1,5 +1,5 @@
 module.exports = {
-    async rewrites(){
+    async rewrites() {
         return [
             {
                 source: '/browse',
@@ -8,6 +8,7 @@ module.exports = {
         ]
     },
     env: {
-        api_key: process.env.API_KEY
+        API_KEY: process.env.API_KEY,
+        WEB_API: process.env.WEB_API
     }
 }

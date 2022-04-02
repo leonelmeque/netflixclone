@@ -4,10 +4,11 @@ import {
 	Container,
 	Image,
 } from "@chakra-ui/react"
+import Link from "next/link"
 
 const Navbar = (): JSX.Element => {
 	return (
-		<Box as='nav' data-testid='navbar' padding="2rem 0">
+		<Box as='nav' data-testid='navbar' padding='2rem 0'>
 			<Container
 				display={"flex"}
 				justifyContent={"space-between"}
@@ -19,13 +20,15 @@ const Navbar = (): JSX.Element => {
 					src='/nxlogo.svg'
 					data-testid='navbar-brand'
 				/>
-				<Button
-					variant={"primary"}
-					role='button'
-					data-testid='signin-btn'
-				>
-					Sign in
-				</Button>
+				<Link href="/login" passHref>
+					<Button
+						variant={"primary"}
+						role='button'
+						data-testid='signin-btn'
+					>
+						Sign in
+					</Button>
+				</Link>
 			</Container>
 		</Box>
 	)
