@@ -9,7 +9,7 @@ import {
 	Heading,
 } from "@chakra-ui/react"
 import { ChangeEvent, FormEvent, useState } from "react"
-import { Icon } from "@/components/common"
+import { Icon } from "-components/common"
 
 const HeroSignUpForm = (): JSX.Element => {
 	const [input, setInput] = useState<string>("")

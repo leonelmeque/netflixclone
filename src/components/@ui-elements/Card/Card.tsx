@@ -1,10 +1,10 @@
 import React from 'react';
-import  CircleButton  from '@/components/common/CircleButton';
+import  CircleButton  from '-components/common/CircleButton';
 import Spacer from '../Spacer/Spacer';
 import VideoJs from '../../VideoJs';
 import styles from './styles.module.css';
 import YouTube from 'react-youtube'
-import { WEB_API } from '@/utilities/constants/constants';
+import { WEB_API } from '-utilities/constants/constants';
 import { Box } from '@chakra-ui/react';
 
 type MovieCard = {

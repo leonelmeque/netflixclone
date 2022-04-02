@@ -1,10 +1,10 @@
 import styles from "./styles.module.css"
-import Layout from "@/components/@ui-elements/Layout"
+import Layout from "-components/@ui-elements/Layout"
 import React, { FunctionComponent } from "react"
-import Spacer from "@/components/@ui-elements/Spacer/Spacer"
-import MovieCard from "@/components/@ui-elements/Card/Card"
-import client from "@/services/api/apollo-client"
-import Carousel from "@/components/@ui-elements/Carousel/Carousel"
+import Spacer from "-components/@ui-elements/Spacer/Spacer"
+import MovieCard from "-components/@ui-elements/Card/Card"
+import client from "-services/api/apollo-client"
+import Carousel from "-components/@ui-elements/Carousel/Carousel"
 import { Box, Heading, Text } from "@chakra-ui/react"
 import {
 	ButtonBack,

@@ -1,11 +1,12 @@
 import styles from "@/ui-modules/home/styles.module.css"
-import Accordion from "@/components/@ui-elements/Accordion"
-import Footer from "@/components/@ui-elements/Footer"
+import Accordion from "-components/@ui-elements/Accordion"
+import Footer from "-components/@ui-elements/Footer"
 import React from "react"
-import { homeData } from "@/utilities/constants/static-text"
+import { homeData } from "-utilities/constants/static-text"
 import Head from "next/head"
-import HeroHeader from "@/components/HeroHeader"
-import HeroSignUpForm from "@/components/HeroSignUpForm"
+import HeroHeader from "-components/HeroHeader"
+import HeroSignUpForm from "-components/HeroSignUpForm"
+import Button from "-components/atoms/Button"
 import {
 	Box,
 	Container,
@@ -24,6 +25,7 @@ const Home = () => {
 		description: string
 	}): JSX.Element => (
 		<>
+			
 			<Heading
 				as='h2'
 				marginBottom='12px'

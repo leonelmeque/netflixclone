@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import styles from '@/ui-modules/login/index.module.css'
-import Input from '@/components/@ui-elements/Input'
-import Button from '@/components/@ui-elements/Button/Button'
-import Footer  from '@/components/@ui-elements/Footer'
+import Input from '-components/@ui-elements/Input'
+import Button from '-components/@ui-elements/Button/Button'
+import Footer  from '-components/@ui-elements/Footer'
 import {useRouter} from 'next/router'
 
 const Login = () => {

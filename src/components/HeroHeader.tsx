@@ -8,6 +8,7 @@ import {
 } from "@chakra-ui/react"
 import HeroSignUpForm from "./HeroSignUpForm"
 import Navbar from "./Navbar"
+import Button from '-components/'
 
 const overlayMixin: BoxProps = {
 	left: "0",
