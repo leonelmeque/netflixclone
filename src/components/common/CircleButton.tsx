@@ -6,7 +6,7 @@ import Icon, { IconProps } from "./Icon"
 interface CircleButtonProps
 	extends Pick<ButtonProps, "onClick" | "style"> {}
 const CircleButton = (
-	props: CircleButtonProps &
+	{onClick, size, iconName}: CircleButtonProps &
 		Pick<IconProps, "iconName" | "size">
 ): JSX.Element => (
 	<Button
@@ -17,9 +17,9 @@ const CircleButton = (
 		justifyContent={"center"}
 		background={"none"}
 		border={"1px solid brand.white"}
-		onClick={props.onClick}
+		onClick={onClick}
 	>
-		<Icon iconName={props.iconName} size={props.size} />
+		<Icon iconName={iconName} size={size} />
 	</Button>
 )
 

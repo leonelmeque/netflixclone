@@ -1,10 +1,10 @@
-import React from "react"
+import React, { ComponentPropsWithoutRef } from "react"
 import { IconNames } from "src/types"
 import * as Feather from "react-feather"
 
 export interface IconProps
-	extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	iconName: IconNames;
+	extends ComponentPropsWithoutRef<"button"> {
+	iconName: IconNames<typeof Feather>;
 	size?:number | string
 }
 
