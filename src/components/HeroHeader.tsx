@@ -9,6 +9,7 @@ import {
 import HeroSignUpForm from "./HeroSignUpForm"
 import Navbar from "./Navbar"
 import Button from '-components/'
+import NavbarWeb from "./organisms/Navbar/NavbarWeb"
 
 const overlayMixin: BoxProps = {
 	left: "0",
@@ -41,7 +42,7 @@ const HeroHeader = (): JSX.Element => {
 				src='/images/hero-img.jpeg'
 				alt='Banner image'
 			/>
-			<Navbar />
+			<NavbarWeb />
 			<Container maxW={"container.xl"} position={'relative'} >
 				<Box
 					maxW={"600px"}
