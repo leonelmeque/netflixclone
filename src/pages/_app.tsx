@@ -2,7 +2,7 @@ import "../styles/slick.css"
 import "../styles/slick-theme.css"
 import "pure-react-carousel/dist/react-carousel.es.css"
 import "../styles/globals.css"
-import theme from "@/theme/index"
+
 import {
 	QueryClient,
 	QueryClientProvider,

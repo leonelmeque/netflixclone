@@ -1,6 +1,5 @@
 import AppHeroHeader from "-components/AppHeroHeader"
 import Spacer from "-components/@ui-elements/Spacer/Spacer"
-import { FETCH_MOVIES } from "-services/api/imdbApi"
 import Dynamic from "next/dynamic"
 import { ErrorBoundary } from "react-error-boundary"
 import { PageErrorFallbackScreen } from "-components/ErrorScreens/ErrorScreens"
@@ -10,7 +9,6 @@ import {
 } from "-utilities/constants/constants"
 import FetchResource from "-components/FetchResource"
 import { Box } from "@chakra-ui/react"
-import { Icon } from "-components/common"
 
 const StreamingCatalog = Dynamic(
 	() =>

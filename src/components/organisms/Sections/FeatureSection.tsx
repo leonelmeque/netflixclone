@@ -21,7 +21,7 @@ const FeatureSection: VoidFunctionComponent<FeatureSectionProps> =
 		const _direction = contentDirection[direction]
 
 		return (
-			<div className='bg-black border-t-[16px] border-[#282828] '>
+			<section about={heading} className='bg-black border-t-[16px] border-[#282828] '>
 				<Layout
 					className={`max-w-6xl mx-auto flex flex-col ${_direction}`}
 				>
@@ -42,7 +42,7 @@ const FeatureSection: VoidFunctionComponent<FeatureSectionProps> =
 							: component}
 					</div>
 				</Layout>
-			</div>
+			</section>
 		)
 	}
 

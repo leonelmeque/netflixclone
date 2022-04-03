@@ -1,5 +1,8 @@
+import Layout from "-components/atoms/Layout"
+import Accordion from "-components/molecules/Accordion"
 import HeaderWeb from "-components/organisms/Header/HeaderWeb"
 import FeatureSection from "-components/organisms/Sections/FeatureSection"
+import { homeData } from "-utilities/constants/static-text"
 import Head from "next/head"
 import { VoidFunctionComponent } from "react"
 
@@ -110,6 +113,27 @@ const HomePage: VoidFunctionComponent = () => {
 						</>
 					)}
 				/>
+				<section
+					about='Frequently Asked Questions'
+					className='bg-black text-white'
+				>
+					<h2 className='text-4xl text-center font-bold py-7'>
+						Frequently Asked Questions
+					</h2>
+					<Layout className={`max-w-3xl mx-auto`}>
+						<ul className='flex flex-col justify-center gap-4'>
+							{homeData.faq.map(({ id, question, answer }) => (
+								<li className='flex-1' key={id}>
+									<Accordion
+										title={question}
+										label={question}
+										content={answer}
+									/>
+								</li>
+							))}
+						</ul>
+					</Layout>
+				</section>
 			</main>
 		</>
 	)
