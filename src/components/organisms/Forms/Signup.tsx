@@ -12,7 +12,7 @@ const SignUp: VoidFunctionComponent<SignUpProps> = () => {
 			</h6>
 			<form
 				action='submit'
-				className='flex gap-2 sm:flex-col lg:flex-row mx-auto'
+				className='flex gap-2 flex-col md:flex-row mx-auto'
 			>
 				<input
 					type='email'
