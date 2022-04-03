@@ -1,5 +1,7 @@
 import Layout from "-components/atoms/Layout"
 import Accordion from "-components/molecules/Accordion"
+import FooterWeb from "-components/organisms/Footer/FooterWeb"
+import SignUp from "-components/organisms/Forms/Signup"
 import HeaderWeb from "-components/organisms/Header/HeaderWeb"
 import FeatureSection from "-components/organisms/Sections/FeatureSection"
 import { homeData } from "-utilities/constants/static-text"
@@ -132,9 +134,11 @@ const HomePage: VoidFunctionComponent = () => {
 								</li>
 							))}
 						</ul>
+						<SignUp />
 					</Layout>
 				</section>
 			</main>
+			<FooterWeb />
 		</>
 	)
 }

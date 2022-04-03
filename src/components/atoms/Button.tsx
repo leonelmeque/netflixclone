@@ -10,7 +10,7 @@ interface ButtonProps extends ComponentProps<"button"> {
 }
 
 const baseStyles =
-	"outline-transparent text-center inline-flex font-semibold"
+	"outline-transparent text-center inline-flex font-semibold justify-center"
 
 const variants = {
 	primary: "bg-red text-white bg-red hover:bg-red",

@@ -1,11 +1,5 @@
 import {
 	ComponentProps,
-	DetailedHTMLProps,
-	DetailsHTMLAttributes,
-	FunctionComponent,
-	MouseEventHandler,
-	ReactHTMLElement,
-	useEffect,
 	useRef,
 	VoidFunctionComponent,
 } from "react"
