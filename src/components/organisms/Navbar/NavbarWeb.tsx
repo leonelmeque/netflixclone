@@ -6,7 +6,7 @@ interface NavbarWebProps {}
 
 const NavbarWeb: FunctionComponent<NavbarWebProps> = () => {
 	return (
-		<nav data-testid='nav' className='py-8'>
+		<nav data-testid='navbar-web' className='py-8'>
 			<Layout className='max-w-6xl mx-auto'>
 				<div className='flex justify-between align-center w-full'>
 					<img

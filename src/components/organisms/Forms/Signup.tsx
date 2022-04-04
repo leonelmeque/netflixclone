@@ -5,7 +5,7 @@ interface SignUpProps {}
 
 const SignUp: VoidFunctionComponent<SignUpProps> = () => {
 	return (
-		<div className='text-white py-8'>
+		<div data-testid="signup-form" className='text-white py-8'>
 			<h6 className='text-center mr-3 text-base py-4'>
 				Ready to watch? Enter your email to create or restart
 				your membership.

@@ -1,5 +1,4 @@
-import Layout from "-components/@ui-elements/Layout"
-import { FunctionComponent, HTMLAttributes } from "react"
+import { FunctionComponent } from "react"
 import SignUp from "../Forms/Signup"
 import NavbarWeb from "../Navbar/NavbarWeb"
 
