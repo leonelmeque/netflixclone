@@ -10,13 +10,15 @@ import { VoidFunctionComponent } from "react"
 
 const HomePage: VoidFunctionComponent = () => {
 	return (
-		<>
+		<div className='bg-[#191919] bg-opacity-8'>
 			<Head>
 				<title>Netflix Clone Home Page</title>
 				<meta name='description' content='Netflix clone' />
 			</Head>
 			<HeaderWeb />
-			<main className='bg-[#191919] bg-opacity-8'>
+
+			<main className=''>
+				<div className='p-1'></div>
 				<FeatureSection
 					heading='Enjoy on yoyr Tv.'
 					description='Watch on Smart Tvs, Playstation, Xbox, Chromecast, Apple Tv, Blue-ray players, and more'
@@ -42,6 +44,7 @@ const HomePage: VoidFunctionComponent = () => {
 						</div>
 					)}
 				/>
+				<div className='p-1'></div>
 				<FeatureSection
 					heading='Download your shows to watch offline'
 					description='Save your favorites easly and always have something to watch'
@@ -76,6 +79,7 @@ const HomePage: VoidFunctionComponent = () => {
 						</>
 					)}
 				/>
+				<div className='p-1'></div>
 				<FeatureSection
 					heading='Watch everywhere.'
 					description='Stream unlimited movies and TV shows on your phone. tablet, laptop, and TV without paying more'
@@ -101,6 +105,7 @@ const HomePage: VoidFunctionComponent = () => {
 						</>
 					)}
 				/>
+				<div className='p-1'></div>
 				<FeatureSection
 					heading='Create profiles for kids.'
 					description='Send kids on adventures with their favorite characters in a space made just for them--free with your membership.'
@@ -115,9 +120,10 @@ const HomePage: VoidFunctionComponent = () => {
 						</>
 					)}
 				/>
+				<div className='p-1'></div>
 				<section
 					about='Frequently Asked Questions'
-					className='bg-black text-white'
+					className='bg-black text-white lg:p-12'
 				>
 					<h2 className='text-4xl text-center font-bold py-7'>
 						Frequently Asked Questions
@@ -138,8 +144,9 @@ const HomePage: VoidFunctionComponent = () => {
 					</Layout>
 				</section>
 			</main>
+			<div className='p-1'></div>
 			<FooterWeb />
-		</>
+		</div>
 	)
 }
 

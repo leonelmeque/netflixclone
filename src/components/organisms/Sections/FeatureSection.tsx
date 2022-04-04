@@ -21,13 +21,13 @@ const FeatureSection: VoidFunctionComponent<FeatureSectionProps> =
 		const _direction = contentDirection[direction]
 
 		return (
-			<section about={heading} className='bg-black border-t-[16px] border-[#282828] '>
+			<section about={heading} className=' py-14 bg-black'>
 				<Layout
 					className={`max-w-6xl mx-auto flex flex-col ${_direction}`}
 				>
 					<div className='text-white text-center md:text-left flex flex-col flex-1 justify-center'>
 						<h2
-							className='mb-4 xxs:text-[2rem] md:text-5xl '
+							className='mb-4 font-bold text-[2rem] md:text-5xl '
 							aria-label={heading}
 						>
 							{heading}

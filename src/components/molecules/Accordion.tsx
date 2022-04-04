@@ -39,7 +39,7 @@ const Accordion: VoidFunctionComponent<AccordionProps> = ({
 			}}
 			{...rest}
 		>
-			<summary className='flex justify-between px-5 py-3 outline-none w-full text-3xl cursor-pointer'>
+			<summary className='flex justify-between p-7 outline-none w-full text-2xl cursor-pointer'>
 				{label}
 				<div className='flex flex-col justify-center'>
 					<span ref={plusRef}>
@@ -50,7 +50,7 @@ const Accordion: VoidFunctionComponent<AccordionProps> = ({
 					</span>
 				</div>
 			</summary>
-			<p className='pt-2 pb-6 px-5 text-lg pointer-events-none'>
+			<p className='p-7 text-2xl border-t-4 border-black pointer-events-none'>
 				{content}
 			</p>
 		</details>

@@ -8,7 +8,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
 	...rest
 }) => {
 	return (
-		<div className={`${className ? className : ''}`.trim()} {...rest}>
+		<div className={`p-4 ${className ? className : ''}`.trim()} {...rest}>
 			{children}
 		</div>
 	)

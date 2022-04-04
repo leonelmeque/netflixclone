@@ -10,7 +10,7 @@ interface ButtonProps extends ComponentProps<"button"> {
 }
 
 const baseStyles =
-	"outline-transparent text-center inline-flex font-semibold justify-center"
+	"outline-transparent text-center inline-flex font-semibold items-center justify-center"
 
 const variants = {
 	primary: "bg-red text-white bg-red hover:bg-red",
@@ -40,7 +40,7 @@ const Button: FunctionComponent<ButtonProps> = ({
 			}`.trim()}
 			{...rest}
 		>
-			{label}
+			<span>{label}</span>
 		</button>
 	)
 }
