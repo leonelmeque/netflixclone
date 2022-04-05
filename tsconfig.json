@@ -19,28 +19,28 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/components/*": [
+      "-components/*": [
         "src/components/*"
       ],
-      "@/pages/*": [
+      "-pages/*": [
         "src/pages/*"
       ],
-      "@/utilities/*": [
+      "-utilities/*": [
         "src/utilities/*"
       ],
-      "@/services/*": [
+      "-services/*": [
         "src/services/*"
       ],
-      "@/css/*": [
+      "-css/*": [
         "src/css/*"
       ],
-      "@/ui-modules/*": [
+      "-ui-modules/*": [
         "src/ui-modules/*"
       ],
-      "@/redux/*": [
+      "-redux/*": [
         "src/redux"
       ],
-       "@/types/*": [
+       "-types/*": [
         "src/types"
       ],
        "@/theme/*": [
