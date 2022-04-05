@@ -2,10 +2,10 @@ import React, {
 	useState,
 	VoidFunctionComponent,
 } from "react"
-import CircleButton from "@/components/common/CircleButton"
+import CircleButton from "-components/common/CircleButton"
 import styles from "./styles.module.css"
 import YouTube from "react-youtube"
-import { WEB_API } from "@/utilities/constants/constants"
+import { WEB_API } from "-utilities/constants/constants"
 import { Box, Spacer } from "@chakra-ui/react"
 import FetchResource from "./FetchResource"
 

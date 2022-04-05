@@ -1,7 +1,7 @@
 import Head from "next/head"
 import React from "react"
 import styles from "-ui-modules/browse/styles.module.css"
-import Button from "-components/@ui-elements/Button/Button"
+import Button from "-components/atoms/Button"
 import { PlusCircle } from "react-feather"
 import { useRouter } from "next/router"
 

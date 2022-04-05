@@ -9,7 +9,8 @@
     "test:watch": "jest --coverage --watchAll --silent ",
     "push": "git push origin $(git branch --show-current)",
     "pull": "git pull origin $(git branch --show-current)",
-    "amend-now": "git commit --amend --no-edit"
+    "amend-now": "git commit --amend --no-edit",
+    "ci": "yarn jest && yarn build"
   },
   "dependencies": {
     "@apollo/client": "^3.4.7",

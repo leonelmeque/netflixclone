@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react"
 import HeroSignUpForm from "./HeroSignUpForm"
 import Navbar from "./Navbar"
-import Button from '-components/'
+import Button from '-components/atoms/Button'
 import NavbarWeb from "./organisms/Navbar/NavbarWeb"
 
 const overlayMixin: BoxProps = {

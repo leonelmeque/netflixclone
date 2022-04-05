@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import styles from '-ui-modules/login/index.module.css'
-import Input from '-components/@ui-elements/Input'
-import Button from '-components/@ui-elements/Button/Button'
-import Footer  from '-components/@ui-elements/Footer'
+// import Input from '-components/@ui-elements/Input'
+import Button from '-components/atoms/Button'
+import FooterWeb  from '-components/organisms/Footer/FooterWeb'
 import {useRouter} from 'next/router'
 
 const Login = () => {
@@ -28,8 +28,8 @@ const Login = () => {
                         </div>
                         {/* write two input components */}
                         <form onSubmit={(event)=>{event.preventDefault(); router.push("/browse")}} className={styles.loginForm}>
-                            <Input inputname="username" aria-autocomplete="inline" value="jonhndoe@domain.com" placeholder="Email or phone number" disabled/>
-                            <Input inputname="password" aria-autocomplete="inline" value="jodhndoe@domain.com" placeholder="Password" type="password" disabled/>
+                            {/* <Input inputname="username" aria-autocomplete="inline" value="jonhndoe@domain.com" placeholder="Email or phone number" disabled/> */}
+                            {/* <Input inputname="password" aria-autocomplete="inline" value="jodhndoe@domain.com" placeholder="Password" type="password" disabled/> */}
                             <Button type="submit" variant='primary' size='lg' label="Sign in" />
                         </form>
                         <div className={styles.loginSettings}>
@@ -56,7 +56,7 @@ const Login = () => {
 
                 </div>
             </div>
-            <Footer showOnLogin/>
+            <FooterWeb/>
         </>
     );
 }

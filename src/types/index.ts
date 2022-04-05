@@ -18,7 +18,7 @@ const elements = [
 
 type ExtractArrayElements<T> = T extends (infer R)[] ? R : T
 
-const _data:ExtractArrayElements<typeof elements> 
+// const _data:ExtractArrayElements<typeof elements> 
 
 function something(){
     console.log(elements.map(({name})=>name))
