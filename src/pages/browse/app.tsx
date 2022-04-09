@@ -1,5 +1,3 @@
-// import AppHeroHeader from "-components/AppHeroHeader"
-// import Spacer from "-components/@ui-elements/Spacer/Spacer"
 import Dynamic from "next/dynamic"
 import { ErrorBoundary } from "react-error-boundary"
 import {
@@ -8,20 +6,12 @@ import {
 } from "-utilities/constants/constants"
 import FetchResource from "-components/FetchResource"
 import { Box } from "@chakra-ui/react"
+import BrowseTemplate from "-components/templates/BrowseTemplate"
 
-// const StreamingCatalog = Dynamic(
-// 	() =>
-// 		import("-components/StreamingCatalog/StreamingCatalog"),
-// 	{ ssr: false }
-// )
 
 const App = () => {
-	return <></>
+	return <BrowseTemplate />
+
 }
 
-export async function getServerSideProps() {
-	return {
-		props: {},
-	}
-}
 export default App
