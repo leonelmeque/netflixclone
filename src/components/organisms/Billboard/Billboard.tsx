@@ -9,7 +9,7 @@ const Billboard: VoidFunctionComponent<BillboardProps> =
 		return (
 			<header
 				data-testid='billboard'
-				className='bg-white h-52 md:h-[95%] relative'
+				className='bg-white h-52 md:h-[720px] relative'
 			>
 				<img
 					src='https://images.unsplash.com/photo-1505925456693-124134d66749?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'

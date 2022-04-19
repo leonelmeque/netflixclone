@@ -4,12 +4,19 @@ import {
 	getMovies,
 } from "-services/api/api"
 import {
+	Fragment,
 	FunctionComponent,
 	useEffect,
 	useState,
 } from "react"
 import StreamingCatalog from "./StreamingCatalog"
-import StreamingCatalogHeader from "./StreamingCatalogHeader"
+import StreamingCatalogHeader from "../../molecules/StreamingCatalogHeader"
+import useSWR from "swr"
+import { fetcher } from "-library/lib"
+import {
+	API_KEY,
+	WEB_API,
+} from "-utilities/constants/constants"
 
 interface StreamingCatalogContainerProps<T = {}> {
 	catalogName: string
@@ -19,23 +26,28 @@ interface StreamingCatalogContainerProps<T = {}> {
 
 const StreamingCatalogContainer: FunctionComponent<StreamingCatalogContainerProps> =
 	({ catalogURL, catalogName, resource }) => {
-		const [movies, setMovies] = useState<any>(null)
+		const { isValidating, data, error } = useSWR(
+			`${WEB_API}/movie/${resource}?api_key=${API_KEY}`,
+			fetcher
+		)
+	
+		if(!data){
+			return <>Loading movies</>
+		}
 
-		useEffect(() => {
-			getMovies(resource).then((data) => {
-				setMovies(data.results)
-			})
-		}, [])
+		if(error){
+			return <>Could not fetch movie catalog</>
+		}
 
 		return (
-			<>
+			<Fragment>
 				<StreamingCatalogHeader
 					catalogTitle={catalogName}
 					catalogNumber={10}
 				/>
 				{/* Movie carousel */}
-				<StreamingCatalog catalog={movies} />
-			</>
+				<StreamingCatalog catalog={data.results} />
+			</Fragment>
 		)
 	}
 

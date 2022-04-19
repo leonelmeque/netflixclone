@@ -9,6 +9,7 @@ module.exports = {
     },
     env: {
         API_KEY: process.env.API_KEY,
-        WEB_API: process.env.WEB_API
+        WEB_API: process.env.WEB_API,
+        IMAGE_ENDPOINT: process.env.IMAGE_ENDPOINT
     }
 }

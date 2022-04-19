@@ -22,3 +22,4 @@ export async function getMovies(resource:string) {
         return null
     }
 }
+

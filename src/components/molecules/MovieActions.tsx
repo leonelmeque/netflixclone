@@ -2,14 +2,14 @@ import { VoidFunctionComponent } from "react"
 
 interface MovieActionsProps {
 	actions: {
-		play: boolean
-		bookmark: boolean
-		like: boolean
-		volume: boolean
-		more: boolean
+		play?: boolean
+		bookmark?: boolean
+		like?: boolean
+		volume?: boolean
+		more?: boolean
 	}
 	isBookmarked: boolean
-	hasLike: "Bad" | "Good" | "Amazing"
+	hasLike: "bad" | "good" | "amazing" | "none"
 }
 
 const MovieActions: VoidFunctionComponent<MovieActionsProps> =

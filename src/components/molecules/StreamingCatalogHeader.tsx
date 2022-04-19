@@ -12,12 +12,12 @@ const StreamingCatalogHeader: VoidFunctionComponent<StreamingCatalogHeaderProps>
 		return (
 			<Layout>
 				{/* Catalog Header */}
-				<div>
+				<div className="text-white text-lg flex gap-4 items-center">
 					<h3>{props.catalogTitle}</h3>
 					<Link href='#'>
-						<span>Explore All</span>
+						<span className="text-sm">Explore All</span>
 					</Link>
-					<span>Icon goes here</span>
+					
 				</div>
 				{/* movie catalog position */}
 				<div></div>
