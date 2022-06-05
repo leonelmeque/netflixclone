@@ -27,21 +27,18 @@ const Movie: VoidFunctionComponent<MovieProps> = ({
 
 	return (
 		<div
-			className={`-z-10 rounded ${
-				isHover ? " z-40 " : ""
-			}`.trim()}
+			className={`rounded cursor-pointer w-full z-30`}
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseEnter}
 		>
-			<div className='h-full'>
+			<div className='w-full'>
 				<Image
 					src={`${process.env.IMAGE_ENDPOINT}/${backdrop_path}`}
 					alt=''
 					customClasses='object-cover'
 				/>
 			</div>
-			<div className='absolute w-full left-0 '>
-				{isHover && (
+			{/* <div className='hidden group-hover:absolute group-hover:block'>
 					<MovieActions
 						actions={{
 							bookmark: true,
@@ -51,11 +48,9 @@ const Movie: VoidFunctionComponent<MovieProps> = ({
 						isBookmarked={false}
 						hasLike='none'
 					/>
-				)}
-				{isHover && (
+
 					<MovieInfo description={"some description"} />
-				)}
-			</div>
+				</div> */}
 		</div>
 	)
 }
