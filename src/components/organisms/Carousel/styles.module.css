@@ -13,15 +13,15 @@
 	z-index: 1;
 }
 
+.carousel-slider::-webkit-scrollbar {
+	display: none;
+}
+
 .carousel-item {
 	list-style-type: none;
 	flex-shrink: 0;
 	scroll-snap-align: left;
 	transition: all 0.5s ease-in-out;
-}
-
-.carousel::-webkit-scrollbar {
-	display: none;
 }
 
 .carousel:hover .carousel-item {
@@ -36,7 +36,6 @@
 .carousel:hover .carousel-item:hover > * {
 	position: absolute;
 }
-
 
 .carousel-item:hover ~ .carousel-item {
 	transform: translateX(25%);
