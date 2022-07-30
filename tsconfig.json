@@ -63,7 +63,7 @@
     "**/*.ts",
     "**/*.tsx",
     "jsconfig.config.js",
-    "jest.config.ts"
+    "jest.config.js"
   ],
   "exclude": [
     "node_modules"
