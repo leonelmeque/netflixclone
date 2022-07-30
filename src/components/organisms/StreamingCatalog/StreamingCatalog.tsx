@@ -1,18 +1,18 @@
 import { VoidFunctionComponent } from "react"
-
 import Movie from "../Movie/Movie"
-import { MovieInterface, MovieMetadata } from "-types/*"
-import Slider from "../Carousel/Slider"
-import Slide from "../Carousel/Slide"
+import { MovieMetadata } from "-types/*"
+import {Slider} from "../Carousel/CarouselSlider"
+import {Slide} from "../Carousel/CarouselSlide"
+
 interface StreamingCatalogProps {
 	catalog: MovieMetadata[]
 }
 
 const StreamingCatalog: VoidFunctionComponent<StreamingCatalogProps> =
 	({ catalog }) => (
-		<Slider>
+		<Slider data={catalog}>
 			{catalog?.map((movie, index) => (
-				<Slide className="w-[240px]">
+				<Slide key={index.toString()} className={`slide-${index} w-[240px]`}>
 					<Movie key={movie?.title} {...movie} />
 				</Slide>
 			))}
