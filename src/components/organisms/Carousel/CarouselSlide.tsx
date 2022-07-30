@@ -1,8 +1,8 @@
 import { ComponentProps, FunctionComponent } from "react"
 import styles from "./styles.module.css"
-interface SlideProps extends ComponentProps<"li"> {}
+interface SlideProps extends ComponentProps<"li"> { }
 
-const Slide: FunctionComponent<SlideProps> = ({
+const CarouselSlide: FunctionComponent<SlideProps> = ({
 	className,
 	children,
 }) => (
@@ -10,4 +10,7 @@ const Slide: FunctionComponent<SlideProps> = ({
 		{children}
 	</li>
 )
-export default Slide
+
+CarouselSlide.displayName = "Slide"
+
+export { CarouselSlide as Slide }
