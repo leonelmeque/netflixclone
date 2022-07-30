@@ -1,0 +1,43 @@
+.carousel {
+	position: relative;
+}
+
+.carousel-slider {
+	display: flex;
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	gap: 0.5rem;
+	scroll-snap-type: x mandatory;
+	z-index: 1;
+}
+
+.carousel-slider::-webkit-scrollbar {
+	display: none;
+}
+
+.carousel-item {
+	list-style-type: none;
+	flex-shrink: 0;
+	scroll-snap-align: left;
+	transition: all 0.5s ease-in-out;
+}
+
+.carousel:hover .carousel-item {
+	transform: translateX(-25%);
+	transition: all 0.5s ease-in-out;
+}
+.carousel:hover .carousel-item:hover {
+	transform: perspective(400px) translateZ(150px);
+	transform-origin: center;
+}
+
+.carousel:hover .carousel-item:hover > * {
+	position: absolute;
+}
+
+.carousel-item:hover ~ .carousel-item {
+	transform: translateX(25%);
+	transition: all 0.5s ease-in-out;
+}

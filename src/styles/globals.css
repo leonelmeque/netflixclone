@@ -2,7 +2,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-
 @layer utilities {
 	.overlay {
 		left: 0;
@@ -11,14 +10,26 @@
 		height: 100%;
 		position: absolute;
 	}
+
+	/* Chrome, Safari and Opera */
+	.hide-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.hide-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
 }
 
-html,body,#__next{
+html,
+body,
+#__next {
 	min-height: 100vh;
 }
 
-@media screen and (max-width:720px) {
-	html{
+@media screen and (max-width: 720px) {
+	html {
 		font-size: 14px;
 	}
 }

@@ -8,10 +8,12 @@ const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/setupTests.js'],
   moduleNameMapper: {
     "^-components(.*)$": "<rootDir>/src/components/$1",
+    "^-hooks(.*)$": "<rootDir>/src/hooks/$1",
     "^-pages(.*)$": "<rootDir>/src/pages/$1",
     "^-css(.*)$": "<rootDir>/src/css/$1",
     "^-utilities(.*)$": "<rootDir>/src/utilities/$1",
     "^-services(.*)$": "<rootDir>/src/services/$1",
+    "^-context(.*)$": "<rootDir>/src/context/$1",
     "^-ui-modules(.*)$": "<rootDir>/src/ui-modules/$1",
     "^-redux(.*)$": "<rootDir>/src/redux/$1",
     "^-types(.*)$": "<rootDir>/src/types/$1",

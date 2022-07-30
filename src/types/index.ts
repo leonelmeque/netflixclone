@@ -1,3 +1,5 @@
+import { bool } from "prop-types"
+
 export type IconNames<T> = keyof T
 
 
@@ -23,3 +25,30 @@ type ExtractArrayElements<T> = T extends (infer R)[] ? R : T
 function something(){
     console.log(elements.map(({name})=>name))
 }
+
+
+export interface MovieMetadata {
+    adult: boolean
+    backdrop_path: string | string[]
+    genre_ids: number[]
+    id: number
+    original_title: string
+    overview: string
+    poster_path: string
+    popularity: number
+    release_date: string
+    title: string
+    video: boolean
+}
+export interface MovieInterface {
+    cast: string
+    genres: string
+    movieType: string
+    description: string
+    match: number
+    year: number | string
+    rated: string | number
+    duration: string
+    mini: boolean
+}
+
